@@ -1,0 +1,75 @@
+{
+  "id": "eiendom-id",
+  "adresse": "Gateadresse 1",
+  "gnr": 123,
+  "bnr": 456,
+  "beskrivelse": "Kort beskrivelse av eiendommen",
+  "plaaceData": {
+    "rapportDato": "2024-01-15T00:00:00Z",
+    "screenshots": [
+      {
+        "filnavn": "oversikt.png",
+        "path": "/images/plaace/eiendom-id/oversikt.png",
+        "beskrivelse": "Hovedoversikt fra Plaace-rapport",
+        "kategori": "oversikt"
+      },
+      {
+        "filnavn": "demografi.png",
+        "path": "/images/plaace/eiendom-id/demografi.png",
+        "beskrivelse": "Demografisk analyse",
+        "kategori": "demografi"
+      },
+      {
+        "filnavn": "marked.png",
+        "path": "/images/plaace/eiendom-id/marked.png",
+        "beskrivelse": "Markedsanalyse",
+        "kategori": "marked"
+      }
+    ],
+    "nokkeldata": {
+      "prisniva": "NOK 53000/m2",
+      "leieinntekter": "15307/m2",
+      "befolkning": 12500,
+      "gjennomsnittsinntekt": "NOK 650000",
+      "arbeidsledighet": 3.5
+    },
+    "demografi": {
+      "totalBefolkning": 12500,
+      "befolkningsutvikling": 2.3,
+      "aldersfordeling": {
+        "0-17": 18,
+        "18-29": 22,
+        "30-49": 28,
+        "50-66": 20,
+        "67+": 12
+      },
+      "husstandsstorrelse": 2.1
+    },
+    "marked": {
+      "omsetning": 285000000,
+      "transaksjoner": 45,
+      "prisutviklingProsent": 5.2,
+      "kvadratmeterpris": 53000
+    }
+  },
+  "tilleggsinfo": {
+    "historikk": "# Historikk\n\nEiendommens historie i markdown-format.",
+    "kontaktperson": "Navn Navnesen",
+    "notater": [
+      "Viktig notat 1",
+      "Viktig notat 2"
+    ],
+    "lenker": [
+      {
+        "tekst": "Relatert dokument",
+        "url": "https://example.com"
+      }
+    ]
+  },
+  "metadata": {
+    "opprettet": "2024-01-15T10:00:00Z",
+    "sistOppdatert": "2024-01-15T10:00:00Z",
+    "status": "publisert",
+    "versjon": 1
+  }
+}
