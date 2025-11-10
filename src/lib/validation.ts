@@ -6,7 +6,10 @@ import { z } from 'zod';
 
 export const ScreenshotSchema = z.object({
   filnavn: z.string().min(1),
-  path: z.string().startsWith('/images/plaace/'),
+  path: z.string().refine(
+    (path) => path.startsWith('/images/plaace/') || path.startsWith('/pdf/'),
+    { message: 'Path must start with /images/plaace/ or /pdf/' }
+  ),
   beskrivelse: z.string(),
   kategori: z.enum(['oversikt', 'demografi', 'marked', 'utvikling', 'annet']),
 });

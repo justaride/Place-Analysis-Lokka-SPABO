@@ -1,0 +1,66 @@
+{
+  "id": "brenneriveien-5",
+  "adresse": "Brenneriveien 5",
+  "gnr": 221,
+  "bnr": 629,
+  "beskrivelse": "Eiendom i Brenneriveien 5, Oslo",
+  "plaaceData": {
+    "rapportDato": "2024-11-10T00:00:00Z",
+    "screenshots": [
+      {
+        "filnavn": "BRENNERIVEIEN 5 – EIENDOMSPROFIL.pdf",
+        "path": "/pdf/brenneriveien-5/BRENNERIVEIEN 5 – EIENDOMSPROFIL.pdf",
+        "beskrivelse": "Eiendomsprofil - Komplett oversikt",
+        "kategori": "oversikt"
+      },
+      {
+        "filnavn": "Brenneriveien 5 ( Nøkkel og Demografi ) .pdf",
+        "path": "/pdf/brenneriveien-5/Brenneriveien 5 ( Nøkkel og Demografi ) .pdf",
+        "beskrivelse": "Nøkkeltall og Demografi",
+        "kategori": "demografi"
+      },
+      {
+        "filnavn": "Brenneriveien 5 ( Besøkende ) .pdf",
+        "path": "/pdf/brenneriveien-5/Brenneriveien 5 ( Besøkende ) .pdf",
+        "beskrivelse": "Besøkende analyse",
+        "kategori": "marked"
+      },
+      {
+        "filnavn": "Brenneriveien 5 ( Bevegelse ) .pdf",
+        "path": "/pdf/brenneriveien-5/Brenneriveien 5 ( Bevegelse ) .pdf",
+        "beskrivelse": "Bevegelsesmønster",
+        "kategori": "utvikling"
+      },
+      {
+        "filnavn": "Brenneriveien 5 ( Korthandel ) .pdf",
+        "path": "/pdf/brenneriveien-5/Brenneriveien 5 ( Korthandel ) .pdf",
+        "beskrivelse": "Korthandel analyse",
+        "kategori": "marked"
+      },
+      {
+        "filnavn": "Brenneriveien 5 ( Konkurransebildet.pdf",
+        "path": "/pdf/brenneriveien-5/Brenneriveien 5 ( Konkurransebildet.pdf",
+        "beskrivelse": "Konkurransebildet",
+        "kategori": "marked"
+      }
+    ],
+    "nokkeldata": {
+      "prisniva": "Data fra Plaace rapport",
+      "leieinntekter": "Data fra Plaace rapport",
+      "gjennomsnittsinntekt": "Data fra Plaace rapport"
+    }
+  },
+  "tilleggsinfo": {
+    "historikk": "# Brenneriveien 5\n\nHistorisk eiendom i Oslo.",
+    "kontaktperson": "Løkka Gårdeierforening",
+    "notater": [
+      "Plaace rapporter lastet opp"
+    ]
+  },
+  "metadata": {
+    "opprettet": "2024-11-10T18:30:00Z",
+    "sistOppdatert": "2024-11-10T18:30:00Z",
+    "status": "publisert",
+    "versjon": 1
+  }
+}
