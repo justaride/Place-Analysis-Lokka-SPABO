@@ -1,23 +1,25 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-lokka-primary: #2c5f2d;
+  --color-lokka-secondary: #97bc62;
+  --color-lokka-accent: #f4a259;
+  --color-lokka-neutral: #2d3748;
+  --color-lokka-light: #f7fafc;
+
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+
+  --shadow-soft: 0 2px 15px rgba(0, 0, 0, 0.08);
+  --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
 
 @layer base {
   :root {
     --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
   }
 
-  * {
-    @apply border-border;
-  }
-
   body {
-    @apply bg-lokka-light text-lokka-neutral;
-  }
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+    background-color: var(--color-lokka-light);
+    color: var(--color-lokka-neutral);
   }
 }

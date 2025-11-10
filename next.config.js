@@ -7,8 +7,6 @@ const nextConfig = {
   },
   // Aktiverer strict mode
   reactStrictMode: true,
-  // Aktiverer swc minification
-  swcMinify: true,
 };
 
-module.exports = nextConfig;
+export default nextConfig;
