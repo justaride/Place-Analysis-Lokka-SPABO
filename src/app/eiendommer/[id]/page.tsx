@@ -7,9 +7,9 @@ import Link from 'next/link';
 import { formaterDato } from '@/lib/utils';
 
 interface PageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -18,7 +18,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps) {
-  const eiendom = await lastEiendom(params.id);
+  const { id } = await params;
+  const eiendom = await lastEiendom(id);
 
   if (!eiendom) {
     return {
@@ -33,7 +34,8 @@ export async function generateMetadata({ params }: PageProps) {
 }
 
 export default async function EiendomPage({ params }: PageProps) {
-  const eiendom = await lastEiendom(params.id);
+  const { id } = await params;
+  const eiendom = await lastEiendom(id);
 
   if (!eiendom) {
     notFound();
