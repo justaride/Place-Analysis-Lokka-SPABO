@@ -1,23 +1,12 @@
-'use client';
-
-import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 
 interface PdfViewerProps {
   pdfUrl: string;
   title: string;
   description?: string;
-  defaultExpanded?: boolean;
 }
 
-export default function PdfViewer({
-  pdfUrl,
-  title,
-  description,
-  defaultExpanded = true,
-}: PdfViewerProps) {
-  const [isExpanded, setIsExpanded] = useState(defaultExpanded);
-
+export default function PdfViewer({ pdfUrl, title, description }: PdfViewerProps) {
   return (
     <Card className="overflow-hidden">
       <CardHeader>
@@ -28,36 +17,26 @@ export default function PdfViewer({
               <p className="mt-1 text-sm text-gray-600">{description}</p>
             )}
           </div>
-          <div className="flex flex-shrink-0 gap-2">
-            <button
-              onClick={() => setIsExpanded(!isExpanded)}
-              className="whitespace-nowrap rounded-md bg-lokka-primary px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-lokka-primary/90"
-            >
-              {isExpanded ? '▼ Skjul' : '▶ Vis'}
-            </button>
-            <a
-              href={pdfUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="whitespace-nowrap rounded-md border-2 border-lokka-primary px-4 py-2 text-sm font-medium text-lokka-primary transition-colors hover:bg-lokka-primary hover:text-white"
-            >
-              📄 Åpne PDF
-            </a>
-          </div>
+          <a
+            href={pdfUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-shrink-0 whitespace-nowrap rounded-md border-2 border-lokka-primary px-4 py-2 text-sm font-medium text-lokka-primary transition-colors hover:bg-lokka-primary hover:text-white"
+          >
+            📄 Åpne i ny fane
+          </a>
         </div>
       </CardHeader>
 
-      {isExpanded && (
-        <CardContent className="p-0">
-          <div className="relative w-full bg-gray-100" style={{ height: '1000px' }}>
-            <iframe
-              src={pdfUrl}
-              className="h-full w-full border-0"
-              title={title}
-            />
-          </div>
-        </CardContent>
-      )}
+      <CardContent className="p-0">
+        <div className="relative w-full bg-gray-100" style={{ height: '1200px' }}>
+          <iframe
+            src={pdfUrl}
+            className="h-full w-full border-0"
+            title={title}
+          />
+        </div>
+      </CardContent>
     </Card>
   );
 }

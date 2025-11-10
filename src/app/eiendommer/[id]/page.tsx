@@ -86,54 +86,6 @@ export default async function EiendomPage({ params }: PageProps) {
 
       {/* Main Content */}
       <Container className="py-12">
-        {/* Tilleggsinfo Section - Moved to top */}
-        {(eiendom.tilleggsinfo.historikk ||
-          eiendom.tilleggsinfo.kontaktperson ||
-          (eiendom.tilleggsinfo.notater && eiendom.tilleggsinfo.notater.length > 0)) && (
-          <section className="mb-12">
-            <Card>
-              <CardContent className="prose prose-lg max-w-none p-8">
-                {eiendom.tilleggsinfo.historikk && (
-                  <div
-                    className="markdown-content"
-                    dangerouslySetInnerHTML={{
-                      __html: eiendom.tilleggsinfo.historikk.replace(/\n/g, '<br/>'),
-                    }}
-                  />
-                )}
-                {eiendom.tilleggsinfo.kontaktperson && (
-                  <div className="mt-6 rounded-lg bg-lokka-light p-4">
-                    <p className="text-sm font-semibold text-lokka-primary">
-                      📞 Kontaktinformasjon
-                    </p>
-                    <p className="mt-1 text-gray-700">
-                      {eiendom.tilleggsinfo.kontaktperson}
-                    </p>
-                  </div>
-                )}
-                {eiendom.tilleggsinfo.notater &&
-                  eiendom.tilleggsinfo.notater.length > 0 && (
-                    <div className="mt-6">
-                      <h4 className="mb-3 font-semibold text-lokka-primary">
-                        📋 Viktig informasjon
-                      </h4>
-                      <ul className="grid gap-2 md:grid-cols-2">
-                        {eiendom.tilleggsinfo.notater.map((notat, index) => (
-                          <li
-                            key={index}
-                            className="rounded-lg bg-lokka-light p-3 text-sm text-gray-700"
-                          >
-                            {notat}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-              </CardContent>
-            </Card>
-          </section>
-        )}
-
         {/* Nøkkeldata Section */}
         {eiendom.plaaceData.nokkeldata && (
           <section className="mb-12">
@@ -182,103 +134,74 @@ export default async function EiendomPage({ params }: PageProps) {
         )}
 
         {/* Plaace Rapporter Section */}
-        <section className="mb-12">
-          <h2 className="mb-6 text-2xl font-bold text-lokka-primary">
-            Plaace Rapporter
-          </h2>
-
+        <section className="space-y-6">
           {/* Oversikt */}
           {pdfsByCategory.oversikt.length > 0 && (
-            <div className="mb-8">
-              <h3 className="mb-4 text-xl font-semibold text-lokka-neutral">
-                Oversikt
-              </h3>
-              <div className="space-y-4">
-                {pdfsByCategory.oversikt.map((pdf, index) => (
-                  <PdfViewer
-                    key={index}
-                    pdfUrl={pdf.path}
-                    title={pdf.filnavn}
-                    description={pdf.beskrivelse}
-                  />
-                ))}
-              </div>
+            <div>
+              {pdfsByCategory.oversikt.map((pdf, index) => (
+                <PdfViewer
+                  key={index}
+                  pdfUrl={pdf.path}
+                  title={pdf.filnavn}
+                  description={pdf.beskrivelse}
+                />
+              ))}
             </div>
           )}
 
           {/* Demografi */}
           {pdfsByCategory.demografi.length > 0 && (
-            <div className="mb-8">
-              <h3 className="mb-4 text-xl font-semibold text-lokka-neutral">
-                Demografi
-              </h3>
-              <div className="space-y-4">
-                {pdfsByCategory.demografi.map((pdf, index) => (
-                  <PdfViewer
-                    key={index}
-                    pdfUrl={pdf.path}
-                    title={pdf.filnavn}
-                    description={pdf.beskrivelse}
-                  />
-                ))}
-              </div>
+            <div>
+              {pdfsByCategory.demografi.map((pdf, index) => (
+                <PdfViewer
+                  key={index}
+                  pdfUrl={pdf.path}
+                  title={pdf.filnavn}
+                  description={pdf.beskrivelse}
+                />
+              ))}
             </div>
           )}
 
           {/* Marked */}
           {pdfsByCategory.marked.length > 0 && (
-            <div className="mb-8">
-              <h3 className="mb-4 text-xl font-semibold text-lokka-neutral">
-                Markedsanalyse
-              </h3>
-              <div className="space-y-4">
-                {pdfsByCategory.marked.map((pdf, index) => (
-                  <PdfViewer
-                    key={index}
-                    pdfUrl={pdf.path}
-                    title={pdf.filnavn}
-                    description={pdf.beskrivelse}
-                  />
-                ))}
-              </div>
+            <div className="space-y-6">
+              {pdfsByCategory.marked.map((pdf, index) => (
+                <PdfViewer
+                  key={index}
+                  pdfUrl={pdf.path}
+                  title={pdf.filnavn}
+                  description={pdf.beskrivelse}
+                />
+              ))}
             </div>
           )}
 
           {/* Utvikling */}
           {pdfsByCategory.utvikling.length > 0 && (
-            <div className="mb-8">
-              <h3 className="mb-4 text-xl font-semibold text-lokka-neutral">
-                Utvikling
-              </h3>
-              <div className="space-y-4">
-                {pdfsByCategory.utvikling.map((pdf, index) => (
-                  <PdfViewer
-                    key={index}
-                    pdfUrl={pdf.path}
-                    title={pdf.filnavn}
-                    description={pdf.beskrivelse}
-                  />
-                ))}
-              </div>
+            <div>
+              {pdfsByCategory.utvikling.map((pdf, index) => (
+                <PdfViewer
+                  key={index}
+                  pdfUrl={pdf.path}
+                  title={pdf.filnavn}
+                  description={pdf.beskrivelse}
+                />
+              ))}
             </div>
           )}
 
           {/* Annet */}
           {pdfsByCategory.annet.length > 0 && (
-            <div className="mb-8">
-              <h3 className="mb-4 text-xl font-semibold text-lokka-neutral">
-                Øvrig informasjon
-              </h3>
-              <div className="space-y-4">
-                {pdfsByCategory.annet.map((pdf, index) => (
-                  <PdfViewer
-                    key={index}
-                    pdfUrl={pdf.path}
-                    title={pdf.filnavn}
-                    description={pdf.beskrivelse}
-                  />
-                ))}
-              </div>
+            <div>
+              {pdfsByCategory.annet.map((pdf, index) => (
+                <PdfViewer
+                  key={index}
+                  pdfUrl={pdf.path}
+                  title={pdf.filnavn}
+                  description={pdf.beskrivelse}
+                />
+              ))}
             </div>
           )}
         </section>
