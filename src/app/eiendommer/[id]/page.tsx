@@ -53,37 +53,87 @@ export default async function EiendomPage({ params }: PageProps) {
   return (
     <>
       {/* Header Section */}
-      <section className="border-b border-gray-200 bg-gradient-to-br from-lokka-primary to-lokka-secondary py-12 text-white">
+      <section className="border-b border-gray-200 bg-gradient-to-br from-lokka-primary to-lokka-secondary py-16 text-white">
         <Container>
-          <div className="mb-4">
+          <div className="mb-6">
             <Link
               href="/eiendommer"
-              className="inline-flex items-center text-sm text-white/80 transition-colors hover:text-white"
+              className="inline-flex items-center gap-2 text-sm text-white/80 transition-colors hover:text-white"
             >
-              ← Tilbake til oversikt
+              <span>←</span> Tilbake til oversikt
             </Link>
           </div>
-          <h1 className="mb-4 text-4xl font-bold">{eiendom.adresse}</h1>
-          <div className="flex flex-wrap gap-4 text-sm">
-            <div className="rounded-lg bg-white/10 px-4 py-2 backdrop-blur">
+          <h1 className="mb-6 text-5xl font-bold">{eiendom.adresse}</h1>
+          <div className="mb-6 flex flex-wrap gap-3 text-sm">
+            <div className="rounded-lg bg-white/15 px-5 py-2.5 backdrop-blur">
               <span className="font-semibold">Gårdsnr:</span> {eiendom.gnr}
             </div>
-            <div className="rounded-lg bg-white/10 px-4 py-2 backdrop-blur">
+            <div className="rounded-lg bg-white/15 px-5 py-2.5 backdrop-blur">
               <span className="font-semibold">Bruksnr:</span> {eiendom.bnr}
             </div>
-            <div className="rounded-lg bg-white/10 px-4 py-2 backdrop-blur">
+            <div className="rounded-lg bg-white/15 px-5 py-2.5 backdrop-blur">
               <span className="font-semibold">Rapport:</span>{' '}
               {formaterDato(eiendom.plaaceData.rapportDato)}
             </div>
           </div>
           {eiendom.beskrivelse && (
-            <p className="mt-4 text-lg text-white/90">{eiendom.beskrivelse}</p>
+            <p className="max-w-4xl text-xl leading-relaxed text-white/95">
+              {eiendom.beskrivelse}
+            </p>
           )}
         </Container>
       </section>
 
       {/* Main Content */}
       <Container className="py-12">
+        {/* Tilleggsinfo Section - Moved to top */}
+        {(eiendom.tilleggsinfo.historikk ||
+          eiendom.tilleggsinfo.kontaktperson ||
+          (eiendom.tilleggsinfo.notater && eiendom.tilleggsinfo.notater.length > 0)) && (
+          <section className="mb-12">
+            <Card>
+              <CardContent className="prose prose-lg max-w-none p-8">
+                {eiendom.tilleggsinfo.historikk && (
+                  <div
+                    className="markdown-content"
+                    dangerouslySetInnerHTML={{
+                      __html: eiendom.tilleggsinfo.historikk.replace(/\n/g, '<br/>'),
+                    }}
+                  />
+                )}
+                {eiendom.tilleggsinfo.kontaktperson && (
+                  <div className="mt-6 rounded-lg bg-lokka-light p-4">
+                    <p className="text-sm font-semibold text-lokka-primary">
+                      📞 Kontaktinformasjon
+                    </p>
+                    <p className="mt-1 text-gray-700">
+                      {eiendom.tilleggsinfo.kontaktperson}
+                    </p>
+                  </div>
+                )}
+                {eiendom.tilleggsinfo.notater &&
+                  eiendom.tilleggsinfo.notater.length > 0 && (
+                    <div className="mt-6">
+                      <h4 className="mb-3 font-semibold text-lokka-primary">
+                        📋 Viktig informasjon
+                      </h4>
+                      <ul className="grid gap-2 md:grid-cols-2">
+                        {eiendom.tilleggsinfo.notater.map((notat, index) => (
+                          <li
+                            key={index}
+                            className="rounded-lg bg-lokka-light p-3 text-sm text-gray-700"
+                          >
+                            {notat}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+              </CardContent>
+            </Card>
+          </section>
+        )}
+
         {/* Nøkkeldata Section */}
         {eiendom.plaaceData.nokkeldata && (
           <section className="mb-12">
@@ -233,48 +283,6 @@ export default async function EiendomPage({ params }: PageProps) {
           )}
         </section>
 
-        {/* Tilleggsinfo Section */}
-        {(eiendom.tilleggsinfo.historikk ||
-          eiendom.tilleggsinfo.kontaktperson ||
-          (eiendom.tilleggsinfo.notater && eiendom.tilleggsinfo.notater.length > 0)) && (
-          <section className="mb-12">
-            <h2 className="mb-6 text-2xl font-bold text-lokka-primary">
-              Tilleggsinformasjon
-            </h2>
-            <Card>
-              <CardContent className="prose prose-sm max-w-none">
-                {eiendom.tilleggsinfo.historikk && (
-                  <div className="mb-4">
-                    <div
-                      dangerouslySetInnerHTML={{
-                        __html: eiendom.tilleggsinfo.historikk,
-                      }}
-                    />
-                  </div>
-                )}
-                {eiendom.tilleggsinfo.kontaktperson && (
-                  <div className="mb-4">
-                    <p className="text-sm text-gray-600">
-                      <strong>Kontaktperson:</strong>{' '}
-                      {eiendom.tilleggsinfo.kontaktperson}
-                    </p>
-                  </div>
-                )}
-                {eiendom.tilleggsinfo.notater &&
-                  eiendom.tilleggsinfo.notater.length > 0 && (
-                    <div>
-                      <h4 className="mb-2 font-semibold">Notater:</h4>
-                      <ul className="list-disc pl-5">
-                        {eiendom.tilleggsinfo.notater.map((notat, index) => (
-                          <li key={index}>{notat}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-              </CardContent>
-            </Card>
-          </section>
-        )}
       </Container>
     </>
   );
