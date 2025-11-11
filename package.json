@@ -1,7 +1,7 @@
 {
-  "name": "place-analysis-lokka",
+  "name": "place-analysis-spabo-eiendom",
   "version": "1.0.0",
-  "description": "Place analysis website for Løkka Gårdeierforening",
+  "description": "Place analysis website for Spabo Eiendom - Grünerløkka properties",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",

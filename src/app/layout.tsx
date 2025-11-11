@@ -8,16 +8,16 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
   title: {
-    default: 'Place Analysis Løkka',
-    template: '%s | Place Analysis Løkka',
+    default: 'Grünerløkka Eiendomsanalyse - Spabo Eiendom',
+    template: '%s | Spabo Eiendom',
   },
-  description: 'Placeanalyser og eiendomsinformasjon for Løkka-området',
-  keywords: ['Løkka', 'eiendom', 'placeanalyse', 'Oslo', 'gårdeierforening'],
-  authors: [{ name: 'Løkka Gårdeierforening' }],
+  description: 'Placeanalyser og eiendomsinformasjon for Spabo Eiendoms eiendommer på Grünerløkka',
+  keywords: ['Løkka', 'Grünerløkka', 'eiendom', 'placeanalyse', 'Oslo', 'Spabo'],
+  authors: [{ name: 'Natural State' }, { name: 'Spabo Eiendom' }],
   openGraph: {
     type: 'website',
     locale: 'nb_NO',
-    siteName: 'Place Analysis Løkka',
+    siteName: 'Grünerløkka Eiendomsanalyse - Spabo Eiendom',
   },
 };
 

@@ -1,6 +1,6 @@
-# Place Analysis Løkka
+# Place Analysis - Spabo Eiendom
 
-Nettside for visning av placeanalyser og eiendomsinformasjon for Løkka Gårdeierforening.
+Nettside for visning av placeanalyser og eiendomsinformasjon for Spabo Eiendom sine eiendommer på Grünerløkka.
 
 ## Teknologi
 
@@ -76,4 +76,4 @@ Se [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) for mer info.
 
 ## Lisens
 
-Privat prosjekt for Løkka Gårdeierforening.
+Privat prosjekt for Spabo Eiendom.
