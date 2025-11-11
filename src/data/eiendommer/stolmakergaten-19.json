@@ -1,0 +1,92 @@
+{
+  "id": "stolmakergaten-19",
+  "adresse": "Stolmakergaten 19",
+  "gnr": 208,
+  "bnr": 358,
+  "beskrivelse": "Historisk hjørnegård fra 1800-tallet, kjent som Wilhelm Røer-bygget. Bygningen har vært i kontinuerlig bruk siden oppførelsen og er et viktig kulturminne på Grünerløkka. I dag huser eiendommen det populære Wilhelm Røer bakeri og konditori, som har gjenskapt den tradisjonsrike bakerivirksomheten på stedet. Klassisk murgård med karakteristisk hjørnebeliggenhet og bevart historisk fasade.",
+  "heroImage": "/images/stolmakergaten-19/hero.jpg",
+  "mapImage": "/images/stolmakergaten-19/map.png",
+  "coordinates": {
+    "lat": 59.9205,
+    "lng": 10.7565
+  },
+  "plaaceData": {
+    "rapportDato": "2024-11-11T00:00:00Z",
+    "screenshots": [
+      {
+        "filnavn": "Nøkkeldata",
+        "path": "/images/stolmakergaten-19/nokkeldata.jpg",
+        "beskrivelse": "Nøkkeldata",
+        "kategori": "demografi"
+      },
+      {
+        "filnavn": "Demografi",
+        "path": "/images/stolmakergaten-19/demografi.jpg",
+        "beskrivelse": "Demografi",
+        "kategori": "demografi"
+      },
+      {
+        "filnavn": "Konkurransebildet",
+        "path": "/images/stolmakergaten-19/konkurransebildet.jpg",
+        "beskrivelse": "Konkurransebildet",
+        "kategori": "marked"
+      },
+      {
+        "filnavn": "Korthandel",
+        "path": "/images/stolmakergaten-19/korthandel.jpg",
+        "beskrivelse": "Korthandel analyse",
+        "kategori": "marked"
+      },
+      {
+        "filnavn": "Bevegelse",
+        "path": "/images/stolmakergaten-19/bevegelse.jpg",
+        "beskrivelse": "Bevegelsesmønster",
+        "kategori": "utvikling"
+      },
+      {
+        "filnavn": "Besøkende",
+        "path": "/images/stolmakergaten-19/besokende.jpg",
+        "beskrivelse": "Besøkende analyse",
+        "kategori": "marked"
+      }
+    ],
+    "nokkeldata": {
+      "prisniva": "Blandet bruk",
+      "leieinntekter": "Næring + boliger",
+      "befolkning": 2500,
+      "gjennomsnittsinntekt": "520 000 NOK",
+      "arbeidsledighet": 95
+    },
+    "demografi": {
+      "totalBefolkning": 2500,
+      "husstandsstorrelse": 2
+    },
+    "marked": {
+      "omsetning": 0,
+      "kvadratmeterpris": 0
+    }
+  },
+  "tilleggsinfo": {
+    "historikk": "## Om Eiendommen\n\nStolmakergaten 19 er en klassisk hjørnegård fra 1800-tallet på Grünerløkka, mest kjent som Wilhelm Røer-bygget. Bygningen representerer et viktig kulturminne og har en spesiell plass i nabolagets historie.\n\n### Nøkkelinformasjon\n\n**Bygningstekniske spesifikasjoner:**\n- Klassisk murgård fra 1800-tallet\n- Hjørnebeliggenhet Stolmakergaten/gatenavn\n- Karakteristisk fasade med historisk preg\n- Næringslokaler i gateplan\n- Boligleiligheter i øvre etasjer\n\n**Fasiliteter:**\n- Wilhelm Røer bakeri og konditori i gateplan\n- Tradisjonsrik virksomhet gjenskapt\n- Sentral beliggenhet på Grünerløkka\n- Høy fotgjengertrafikk\n\n### Beliggenhet\n\nEiendommen har en sentral plassering på Grünerløkka:\n- Hjørnebeliggenhet med høy synlighet\n- Nær kollektivknutepunkter\n- Aktiv del av Grünerløkkas handels- og serveringsmiljø\n- Walk Score: 98/100 (Walker's Paradise)\n\n### Leietakere\n\n**Wilhelm Røer Bakeri & Konditori**\nPopulært bakeri og konditori som har gjenskapt den tradisjonsrike bakerivirksomheten som tidligere var på stedet. Kjent for håndverksbrød og tradisjonelt konditorhåndverk.\n\n### Historikk\n\n**1800-tallet: Opprinnelig oppføring**\nOppført som klassisk murgård i Grünerløkkas utbyggingsperiode. Bygningen har hatt kontinuerlig virksomhet siden oppførelsen.\n\n**Historisk bakerivirksomhet**\nI mange år huset bygningen Wilhelm Røer bakeri, som var en viktig institusjon i nabolaget. Bakeriet var kjent for håndverksbrød og konditorvarer.\n\n**2010-tallet: Gjenopplivning**\nEtter en periode med annen virksomhet ble bakeritradisjonen gjenskapt. Det nye Wilhelm Røer bakeri & konditori åpnet og har blitt en populær institusjon på Grünerløkka.\n\n**I dag**\nBygningen står som et bevart kulturminne med levende virksomhet. Den historiske fasaden er godt bevart, og bakerivirksomheten fortsetter tradisjonen fra tidligere tider.",
+    "kontaktperson": "Kontakt eier via Løkka Gårdeierforening",
+    "notater": [
+      "Byggeår: ca. 1800-tallet",
+      "Kulturminne med historisk verdi",
+      "Wilhelm Røer bakeri & konditori",
+      "Bevart historisk fasade",
+      "Hjørnebeliggenhet"
+    ],
+    "lenker": [
+      {
+        "tekst": "Wilhelm Røer",
+        "url": "https://www.wilhelmroer.no"
+      }
+    ]
+  },
+  "metadata": {
+    "opprettet": "2025-11-11T02:00:00Z",
+    "sistOppdatert": "2025-11-11T02:00:00Z",
+    "status": "publisert",
+    "versjon": 1
+  }
+}

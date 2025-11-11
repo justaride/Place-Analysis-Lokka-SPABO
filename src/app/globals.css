@@ -1,16 +1,20 @@
 @import "tailwindcss";
 
 @theme {
-  --color-lokka-primary: #2c5f2d;
-  --color-lokka-secondary: #97bc62;
-  --color-lokka-accent: #f4a259;
+  /* Natural State inspired neutral palette */
+  --color-lokka-primary: #1a1a1a;
+  --color-lokka-secondary: #4a4a4a;
+  --color-lokka-accent: #6b7280;
   --color-lokka-neutral: #2d3748;
-  --color-lokka-light: #f7fafc;
+  --color-lokka-light: #fafafa;
+  --color-lokka-earth: #8b7355;
+  --color-lokka-subtle-green: #6b8e6b;
 
   --font-sans: var(--font-inter), system-ui, sans-serif;
 
-  --shadow-soft: 0 2px 15px rgba(0, 0, 0, 0.08);
-  --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
+  --shadow-soft: 0 2px 15px rgba(0, 0, 0, 0.06);
+  --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-large: 0 10px 40px rgba(0, 0, 0, 0.1);
 }
 
 @layer base {

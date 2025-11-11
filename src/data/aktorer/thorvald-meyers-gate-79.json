@@ -1,0 +1,49 @@
+{
+  "actors": [
+    {
+      "rank": "#1",
+      "navn": "Schala & Partners",
+      "type": "Tjenester / Eiendomsmegling",
+      "adresse": "Thorvald Meyers gate 79",
+      "kommune": "Oslo",
+      "omsetning": null,
+      "kjedeProsent": null,
+      "yoyVekst": null,
+      "ansatteLokalt": null,
+      "ansatteKjede": null,
+      "kjedeLokasjoner": null,
+      "markedsandel": null
+    },
+    {
+      "rank": "#2",
+      "navn": "Oppgjør Nord AS",
+      "type": "Tjenester / Oppgjørstjenester",
+      "adresse": "Thorvald Meyers gate 79",
+      "kommune": "Oslo",
+      "omsetning": null,
+      "kjedeProsent": null,
+      "yoyVekst": null,
+      "ansatteLokalt": null,
+      "ansatteKjede": null,
+      "kjedeLokasjoner": null,
+      "markedsandel": null
+    }
+  ],
+  "categoryStats": {
+    "Tjenester / Eiendomsmegling": {
+      "count": 1,
+      "totalRevenue": 0,
+      "avgRevenue": 0.0
+    },
+    "Tjenester / Oppgjørstjenester": {
+      "count": 1,
+      "totalRevenue": 0,
+      "avgRevenue": 0.0
+    }
+  },
+  "metadata": {
+    "totalActors": 2,
+    "totalCategories": 2,
+    "generatedAt": "2025-11-11T20:00:00Z"
+  }
+}

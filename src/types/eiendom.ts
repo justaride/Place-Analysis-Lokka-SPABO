@@ -7,6 +7,12 @@ export interface Eiendom {
   gnr: number;
   bnr: number;
   beskrivelse?: string;
+  heroImage?: string;
+  mapImage?: string;
+  coordinates?: {
+    lat: number;
+    lng: number;
+  };
   plaaceData: PlaaceData;
   tilleggsinfo: Tilleggsinfo;
   metadata: Metadata;

@@ -1,0 +1,83 @@
+{
+  "id": "thorvald-meyers-gate-79",
+  "adresse": "Thorvald Meyers gate 79",
+  "gnr": 228,
+  "bnr": 521,
+  "beskrivelse": "Klassisk murgård fra 1870 ved Schous plass med megler- og oppgjørskontorer i gateplan. Borettslag med 7 boliger forvaltet av OBOS. Listeført (Gul liste).",
+  "heroImage": "/images/thorvald-meyers-gate-79/hero.jpg",
+  "mapImage": "/images/thorvald-meyers-gate-79/map.png",
+  "plaaceData": {
+    "rapportDato": "2024-11-11T00:00:00Z",
+    "screenshots": [
+      {
+        "filnavn": "Nøkkeltall",
+        "path": "/images/thorvald-meyers-gate-79/nokkeltall.jpg",
+        "kategori": "oversikt",
+        "beskrivelse": "Nøkkeltall for området - besøkende, omsetning og leiepriser"
+      },
+      {
+        "filnavn": "Besøkende",
+        "path": "/images/thorvald-meyers-gate-79/besokende.jpg",
+        "kategori": "demografi",
+        "beskrivelse": "Besøkendeanalyse med geografisk fordeling og demografiske data"
+      },
+      {
+        "filnavn": "Bevegelse",
+        "path": "/images/thorvald-meyers-gate-79/bevegelse.jpg",
+        "kategori": "demografi",
+        "beskrivelse": "Bevegelsesmønstre og tidsfordeling av fottrafikk"
+      },
+      {
+        "filnavn": "Demografi",
+        "path": "/images/thorvald-meyers-gate-79/demografi.jpg",
+        "kategori": "demografi",
+        "beskrivelse": "Detaljert demografisk sammensetning av besøkende"
+      },
+      {
+        "filnavn": "Korthandel",
+        "path": "/images/thorvald-meyers-gate-79/korthandel.jpg",
+        "kategori": "marked",
+        "beskrivelse": "Korthandelsstatistikk og forbruksmønstre"
+      },
+      {
+        "filnavn": "Konkurransebildet",
+        "path": "/images/thorvald-meyers-gate-79/konkurransebildet.jpg",
+        "kategori": "marked",
+        "beskrivelse": "Konkurranseanalyse med oversikt over nærliggende virksomheter"
+      }
+    ],
+    "nokkeldata": {
+      "prisniva": "105 342 kr/m²",
+      "leieinntekter": "3000-4000 NOK/m²/år",
+      "befolkning": 3394,
+      "gjennomsnittsinntekt": "538 000 NOK",
+      "arbeidsledighet": 94
+    },
+    "demografi": {
+      "totalBefolkning": 3394,
+      "husstandsstorrelse": 2
+    },
+    "marked": {
+      "omsetning": 0,
+      "kvadratmeterpris": 105342
+    }
+  },
+  "tilleggsinfo": {
+    "historikk": "## Klassisk beboelsesgård ved Schous plass (1870)\n\n**Thorvald Meyers gate 79** er en klassisk murgård fra 1870, oppført i perioden da Grünerløkka utviklet seg fra landbruksområde til tett befolket arbeiderstrøk. Bygget representerer den typiske bebyggelsen fra 1800-tallets andre halvdel, med sin robuste murkonstruksjon og tidstypiske fasadeutforming.\n\n### Historisk kontekst\n\nBygningen ble reist i samme periode som storparten av Grünerløkkas klassiske kvartalbebyggelse. På 1800-tallet var dette området i sterk utvikling, drevet av industrialiseringen og befolkningsveksten i Kristiania. Historiske fotografier fra 1961 viser bygningens opprinnelige karakter, og mange av disse trekkene er bevart til i dag.\n\n### Vernestatus og kulturminnevern\n\nEiendommen er **listeført på Gul liste** (Kulturminnesøk ID 166714), som indikerer at den er vurdert som bevaringsverdig. Dette innebærer at bygningen har antikvarisk verdi som del av Grünerløkkas kulturhistoriske miljø, selv om den ikke er forskriftsfredete som noen av de mest fremtredende bygningene i området.\n\n### Fra leiegård til borettslag\n\nOpprinnelig oppført som leiegård, er eiendommen i dag organisert som **Borettslaget THV Meyersgt 79** med 7 boenheter. Forvaltningen er lagt til OBOS, en av Norges største boligbyggelag. Dette representerer den typiske utviklingen mange av Grünerløkkas leiegårder har gjennomgått - fra privat utleie til beboerorganisert borettslag.\n\n### Schous plass og kollektivknutepunkt\n\nBygningens beliggenhet ved **Schous plass** - bare ca. 30 meter fra trikkeholdeplass - gjør den til en del av et viktig byrom på Grünerløkka. Schous plass har vært et knutepunkt for kollektivtrafikk siden trikken kom til området, og har i dag svært høy fottrafikk med over 68 000 passeringer daglig. Plassen er oppkalt etter bryggerigrunnlegger Jørgen Young Schou.\n\n### Næring i gateplan\n\nI dag huser bygningens gateplan **Schala & Partners**, et eiendomsmeglingskontor, sammen med **Oppgjør Nord AS** som leverer oppgjørstjenester til eiendomsbransjen. Dette er et typisk eksempel på hvordan Grünerløkkas gateplan har utviklet seg fra tradisjonell detaljhandel og håndverk til moderne tjenesteyting.\n\n### Energieffektivisering og framtid\n\nMed energikarakter G står bygningen overfor utfordringer knyttet til moderne krav om energieffektivitet. Dette er en vanlig problemstilling for bevaringsverdige bygninger fra 1800-tallet, hvor det må finnes balansen mellom teknisk oppgradering og bevaring av historisk substans og uttrykk.",
+    "kontaktperson": "Borettslaget THV Meyersgt 79 (OBOS-forvaltet)",
+    "notater": [
+      "Energikarakter G indikerer behov for oppgradering",
+      "Sentral beliggenhet ved Schous plass - ca. 30m til trikk",
+      "7 boenheter i borettslaget",
+      "Schala & Partners meglerkontor i gateplan",
+      "Oppgjør Nord AS tilknyttet meglervirksomheten"
+    ],
+    "lenker": []
+  },
+  "metadata": {
+    "opprettet": "2025-11-11T19:00:00Z",
+    "sistOppdatert": "2025-11-11T19:00:00Z",
+    "status": "publisert",
+    "versjon": 1
+  }
+}

@@ -1,56 +1,58 @@
 import Link from 'next/link';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
+import Image from 'next/image';
 import type { Eiendom } from '@/types/eiendom';
-import { formaterDato } from '@/lib/utils';
 
 interface EiendomCardProps {
   eiendom: Eiendom;
 }
 
 export default function EiendomCard({ eiendom }: EiendomCardProps) {
-  const antallRapporter = eiendom.plaaceData.screenshots.length;
-
   return (
-    <Link href={`/eiendommer/${eiendom.id}`}>
-      <Card hover className="h-full transition-all">
-        <CardHeader>
-          <CardTitle>{eiendom.adresse}</CardTitle>
-          <div className="mt-2 flex gap-2 text-xs text-gray-600">
-            <span className="rounded-full bg-lokka-primary/10 px-2 py-1">
-              Gnr: {eiendom.gnr}
-            </span>
-            <span className="rounded-full bg-lokka-primary/10 px-2 py-1">
-              Bnr: {eiendom.bnr}
-            </span>
+    <Link href={`/eiendommer/${eiendom.id}`} className="group">
+      <div className="h-full rounded-2xl border border-gray-200/50 bg-white overflow-hidden shadow-soft transition-all duration-300 hover:shadow-large hover:-translate-y-1">
+        {/* Hero Image */}
+        {eiendom.heroImage && (
+          <div className="relative aspect-[4/3] w-full overflow-hidden bg-gray-100">
+            <Image
+              src={eiendom.heroImage}
+              alt={eiendom.adresse}
+              fill
+              className="object-cover transition-transform duration-300 group-hover:scale-105"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
           </div>
-        </CardHeader>
-        <CardContent>
+        )}
+
+        <div className="p-8">
+          {/* Header */}
+          <div className="mb-6">
+            <h3 className="text-2xl font-bold text-lokka-primary mb-3 group-hover:text-lokka-secondary transition-colors">
+              {eiendom.adresse}
+            </h3>
+            <div className="flex gap-3 text-xs">
+              <span className="rounded-full bg-lokka-secondary/10 px-3 py-1.5 font-medium text-lokka-secondary">
+                Gnr: {eiendom.gnr}
+              </span>
+              <span className="rounded-full bg-lokka-secondary/10 px-3 py-1.5 font-medium text-lokka-secondary">
+                Bnr: {eiendom.bnr}
+              </span>
+            </div>
+          </div>
+
+          {/* Description */}
           {eiendom.beskrivelse && (
-            <p className="mb-4 line-clamp-2 text-sm text-gray-600">
+            <p className="mb-6 line-clamp-5 text-sm leading-relaxed text-lokka-neutral">
               {eiendom.beskrivelse}
             </p>
           )}
 
-          <div className="space-y-2 text-sm">
-            <div className="flex items-center justify-between">
-              <span className="text-gray-600">Rapporter:</span>
-              <span className="font-semibold text-lokka-primary">
-                {antallRapporter} PDF{antallRapporter !== 1 ? 'er' : ''}
-              </span>
-            </div>
-            <div className="flex items-center justify-between">
-              <span className="text-gray-600">Oppdatert:</span>
-              <span className="font-semibold text-lokka-primary">
-                {formaterDato(eiendom.plaaceData.rapportDato)}
-              </span>
-            </div>
+          {/* CTA */}
+          <div className="mt-8 flex items-center gap-2 text-sm font-medium text-lokka-primary group-hover:gap-3 transition-all">
+            <span>Se detaljer</span>
+            <span className="transition-transform group-hover:translate-x-1">→</span>
           </div>
-
-          <div className="mt-4 text-sm font-medium text-lokka-primary">
-            Se detaljer →
-          </div>
-        </CardContent>
-      </Card>
+        </div>
+      </div>
     </Link>
   );
 }

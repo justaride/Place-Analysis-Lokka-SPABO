@@ -1,42 +1,19 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-
 interface PdfViewerProps {
   pdfUrl: string;
   title: string;
   description?: string;
 }
 
-export default function PdfViewer({ pdfUrl, title, description }: PdfViewerProps) {
+export default function PdfViewer({ pdfUrl, title }: PdfViewerProps) {
   return (
-    <Card className="overflow-hidden">
-      <CardHeader>
-        <div className="flex items-start justify-between gap-4">
-          <div className="flex-1">
-            <CardTitle className="text-lg">{title}</CardTitle>
-            {description && (
-              <p className="mt-1 text-sm text-gray-600">{description}</p>
-            )}
-          </div>
-          <a
-            href={pdfUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-shrink-0 whitespace-nowrap rounded-md border-2 border-lokka-primary px-4 py-2 text-sm font-medium text-lokka-primary transition-colors hover:bg-lokka-primary hover:text-white"
-          >
-            📄 Åpne i ny fane
-          </a>
-        </div>
-      </CardHeader>
-
-      <CardContent className="p-0">
-        <div className="relative w-full bg-gray-100" style={{ height: '1200px' }}>
-          <iframe
-            src={pdfUrl}
-            className="h-full w-full border-0"
-            title={title}
-          />
-        </div>
-      </CardContent>
-    </Card>
+    <div className="mb-8">
+      <div className="relative w-full overflow-hidden rounded-lg shadow-soft" style={{ height: '1400px' }}>
+        <iframe
+          src={pdfUrl}
+          className="h-full w-full border-0"
+          title={title}
+        />
+      </div>
+    </div>
   );
 }

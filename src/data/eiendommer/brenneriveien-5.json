@@ -4,43 +4,49 @@
   "gnr": 208,
   "bnr": 62,
   "beskrivelse": "Moderne kontorlokaler i historisk industribygg ved Akerselva. Bygget fra 1966 er transformert til kreativt kontormiljø med 2 545 m² BTA fordelt på 5 etasjer. Eiendommen tilbyr autentisk industriell karakter kombinert med moderne fasiliteter, og huser kreative og kulturelle virksomheter i hjertet av Grünerløkka.",
+  "heroImage": "/images/brenneriveien-5/hero.jpg",
+  "mapImage": "/images/brenneriveien-5/map.png",
+  "coordinates": {
+    "lat": 59.9198549,
+    "lng": 10.7520967
+  },
   "plaaceData": {
     "rapportDato": "2024-11-10T00:00:00Z",
     "screenshots": [
       {
-        "filnavn": "BRENNERIVEIEN 5 – EIENDOMSPROFIL.pdf",
-        "path": "/pdf/brenneriveien-5/BRENNERIVEIEN 5 – EIENDOMSPROFIL.pdf",
-        "beskrivelse": "Eiendomsprofil - Komplett oversikt",
-        "kategori": "oversikt"
-      },
-      {
-        "filnavn": "Brenneriveien 5 ( Nøkkel og Demografi ) .pdf",
-        "path": "/pdf/brenneriveien-5/Brenneriveien 5 ( Nøkkel og Demografi ) .pdf",
-        "beskrivelse": "Nøkkeltall og Demografi",
+        "filnavn": "Nøkkeldata",
+        "path": "/images/brenneriveien-5/nokkeldata.jpg",
+        "beskrivelse": "Nøkkeldata",
         "kategori": "demografi"
       },
       {
-        "filnavn": "Brenneriveien 5 ( Besøkende ) .pdf",
-        "path": "/pdf/brenneriveien-5/Brenneriveien 5 ( Besøkende ) .pdf",
-        "beskrivelse": "Besøkende analyse",
+        "filnavn": "Demografi",
+        "path": "/images/brenneriveien-5/demografi.jpg",
+        "beskrivelse": "Demografi",
+        "kategori": "demografi"
+      },
+      {
+        "filnavn": "Konkurransebildet",
+        "path": "/images/brenneriveien-5/konkurransebildet.jpg",
+        "beskrivelse": "Konkurransebildet",
         "kategori": "marked"
       },
       {
-        "filnavn": "Brenneriveien 5 ( Bevegelse ) .pdf",
-        "path": "/pdf/brenneriveien-5/Brenneriveien 5 ( Bevegelse ) .pdf",
-        "beskrivelse": "Bevegelsesmønster",
-        "kategori": "utvikling"
-      },
-      {
-        "filnavn": "Brenneriveien 5 ( Korthandel ) .pdf",
-        "path": "/pdf/brenneriveien-5/Brenneriveien 5 ( Korthandel ) .pdf",
+        "filnavn": "Korthandel",
+        "path": "/images/brenneriveien-5/korthandel.jpg",
         "beskrivelse": "Korthandel analyse",
         "kategori": "marked"
       },
       {
-        "filnavn": "Brenneriveien 5 ( Konkurransebildet.pdf",
-        "path": "/pdf/brenneriveien-5/Brenneriveien 5 ( Konkurransebildet.pdf",
-        "beskrivelse": "Konkurransebildet",
+        "filnavn": "Bevegelse",
+        "path": "/images/brenneriveien-5/bevegelse.jpg",
+        "beskrivelse": "Bevegelsesmønster",
+        "kategori": "utvikling"
+      },
+      {
+        "filnavn": "Besøkende",
+        "path": "/images/brenneriveien-5/besokende.jpg",
+        "beskrivelse": "Besøkende analyse",
         "kategori": "marked"
       }
     ],

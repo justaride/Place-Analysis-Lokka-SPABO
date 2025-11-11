@@ -7,8 +7,8 @@ import { z } from 'zod';
 export const ScreenshotSchema = z.object({
   filnavn: z.string().min(1),
   path: z.string().refine(
-    (path) => path.startsWith('/images/plaace/') || path.startsWith('/pdf/'),
-    { message: 'Path must start with /images/plaace/ or /pdf/' }
+    (path) => path.startsWith('/images/') || path.startsWith('/pdf/'),
+    { message: 'Path must start with /images/ or /pdf/' }
   ),
   beskrivelse: z.string(),
   kategori: z.enum(['oversikt', 'demografi', 'marked', 'utvikling', 'annet']),
@@ -58,6 +58,12 @@ export const EiendomSchema = z.object({
   gnr: z.number().positive(),
   bnr: z.number().positive(),
   beskrivelse: z.string().optional(),
+  heroImage: z.string().optional(),
+  mapImage: z.string().optional(),
+  coordinates: z.object({
+    lat: z.number(),
+    lng: z.number(),
+  }).optional(),
   plaaceData: PlaaceDataSchema,
   tilleggsinfo: z.object({
     historikk: z.string().optional(),

@@ -14,7 +14,7 @@ export default function Navigation() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex items-center space-x-1">
+    <nav className="flex items-center space-x-2">
       {navItems.map((item) => {
         const isActive =
           pathname === item.href ||
@@ -25,10 +25,10 @@ export default function Navigation() {
             key={item.href}
             href={item.href}
             className={cn(
-              'rounded-lg px-4 py-2 text-sm font-medium transition-colors',
+              'rounded-lg px-5 py-2.5 text-sm font-medium transition-all duration-200',
               isActive
-                ? 'bg-lokka-primary text-white'
-                : 'text-gray-700 hover:bg-gray-100 hover:text-lokka-primary'
+                ? 'bg-lokka-primary text-white shadow-sm'
+                : 'text-lokka-secondary hover:bg-gray-50 hover:text-lokka-primary'
             )}
           >
             {item.label}

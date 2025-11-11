@@ -1,0 +1,79 @@
+{
+  "id": "markveien-56",
+  "adresse": "Markveien 56",
+  "gnr": 228,
+  "bnr": 195,
+  "beskrivelse": "Næringseiendom i Markveien, Grünerløkkas viktigste handlegate etter Thorvald Meyers gate. Strategisk beliggenhet mellom Olaf Ryes plass og Schous plass med høy fottrafikk. Variert tilbud av handel, tjenester og servering i området.",
+  "heroImage": "/images/markveien-56/hero.jpg",
+  "mapImage": "/images/markveien-56/map.png",
+  "coordinates": {
+    "lat": 59.9207,
+    "lng": 10.7591
+  },
+  "plaaceData": {
+    "rapportDato": "2024-11-11T00:00:00Z",
+    "screenshots": [
+      {
+        "filnavn": "Nøkkeldata",
+        "path": "/images/markveien-56/nokkeldata.jpg",
+        "beskrivelse": "Nøkkeldata for området",
+        "kategori": "oversikt"
+      },
+      {
+        "filnavn": "Demografi",
+        "path": "/images/markveien-56/demografi.jpg",
+        "beskrivelse": "Demografisk analyse",
+        "kategori": "demografi"
+      },
+      {
+        "filnavn": "Bevegelse",
+        "path": "/images/markveien-56/bevegelse.jpg",
+        "beskrivelse": "Bevegelsesmønster og trafikkflyt",
+        "kategori": "utvikling"
+      },
+      {
+        "filnavn": "Besøkende",
+        "path": "/images/markveien-56/besokende.jpg",
+        "beskrivelse": "Besøkende analyse",
+        "kategori": "marked"
+      }
+    ],
+    "nokkeldata": {
+      "prisniva": "Næringseiendom",
+      "leieinntekter": "Varierende",
+      "befolkning": 7500,
+      "gjennomsnittsinntekt": "550 000 NOK",
+      "arbeidsledighet": 94
+    },
+    "demografi": {
+      "totalBefolkning": 7500,
+      "husstandsstorrelse": 2
+    },
+    "marked": {
+      "omsetning": 0,
+      "kvadratmeterpris": 0
+    }
+  },
+  "tilleggsinfo": {
+    "historikk": "## Om Eiendommen\n\nMarkveien 56 er en næringseiendom strategisk plassert i Markveien, som er Grünerløkkas viktigste handlegate etter Thorvald Meyers gate. Eiendommen ligger i et område preget av tett kommersiell aktivitet med butikker, restauranter, kaféer og tjenesteyting.\n\n### Nøkkelinformasjon\n\n**Matrikkel:**\n- **Gårdsnummer (gnr):** 228\n- **Bruksnummer (bnr):** 195\n- **Postnummer:** 0550 Oslo\n- **Bydel:** Grünerløkka\n\n**Bygningsdata:**\n- **Adresse:** Markveien 56\n- **Beliggenhet:** Mellom Olaf Ryes plass og Schous plass\n- **Type:** Næringseiendom\n\n### Beliggenhet og Kontekst\n\n**Strategisk posisjon:**\n- **Markveien** – Grünerløkkas nest viktigste handlegate\n- Mellom **Olaf Ryes plass** og **Schous plass** – to av bydelens viktigste knutepunkter\n- Høy fottrafikk med kombinasjon av lokalbefolkning og besøkende\n- Tett naboskapsforhold til etablerte handels- og serveringsvirksomheter\n\n**Tilgjengelighet:**\n- **Walk Score:** 98/100 (Walker's Paradise)\n- **Nærmeste kollektivstopp:**\n  - Olaf Ryes plass (ca. 200 m)\n  - Schous plass (ca. 200 m)\n- **Kollektivlinjer:**\n  - Trikk: 11, 12, 18 (Olaf Ryes plass og Schous plass)\n  - Buss: Flere linjer via Markveien\n- **Sykkelvennlig:** Etablert sykkelinfrastruktur og nærhet til Akerselva-stien\n\n**Nærområde:**\n\n*Handelsstrøk:*\n- Markveien – Tett rekke av butikker og restauranter\n- Kort avstand til Thorvald Meyers gate\n- Nærhet til Olaf Ryes plass' serveringsmiljø\n\n*Kulturmiljø:*\n- Birkelunden – Historisk park og kulturmiljø\n- Schous kulturbryggeri\n- Paulus kirke\n\n*Parker og grøntområder:*\n- Olaf Ryes plass (10 dekar)\n- Birkelunden (16,3 dekar)\n- Akerselva miljøpark\n\n### Handelsområde\n\nMarkveien utgjør en viktig handelsakse på Grünerløkka med variert tilbud:\n\n**Området rundt Markveien 56 har (basert på aktøranalyse):**\n- **153 registrerte aktører** i nærområdet\n- **52 restauranter og spisesteder** – størst kategori\n- **17 matbutikker** – fra dagligvare til spesialiserte konsepter\n- **17 skjønnhet- og velvære-virksomheter**\n- **14 klesbutikker**\n- **10 hjem- og interiørbutikker**\n- **10 annen handel**\n- **8 bakerier og kaféer**\n- **7 sport- og fritidsbutikker**\n- **7 pub og bar**\n- **5 profesjonelle tjenester**\n- **4 treningssentre**\n\n**Topp aktører i området:**\n1. **Trattoria Popolare** (NOK 84 mill. omsetning)\n2. **Vinmonopolet Nordregate Oslo** (NOK 73 mill.)\n3. **Kiwi Minipris Markveien** (NOK 69 mill.)\n4. **Nedre Foss** (NOK 56 mill.)\n5. **Extra Hausmannsgate** (NOK 49 mill.)\n\n**Leietakere på Markveien 56:**\n- **Frøken Dianas Salonger AS** – Handel (NOK 38 mill., #10 i området)\n- **Seglem AS** – Handel (NOK 7 mill., #70 i området)\n- **Mevlana Frukt & Grønt AS** – Matbutikk (NOK 5 mill., #83 i området)\n- **Løkka Frisør AS** – Frisør (NOK 1 mill., #138 i området)\n- **Retrolykke Herretrikotasje AS** – Klesbutikk (NOK 920k, #140 i området)\n\n### Nåværende Bruk\n\n**Profil:**\nMarkveien 56 fungerer som næringseiendom med blandet bruk, typisk for Markveiens karakter som lokalsentrumsaksel. Eiendommen huser både handelsbedrifter, servicetjenester og mindre spesialiserte konsepter som er karakteristisk for Grünerløkkas kommersielle miljø.\n\n**Handelskarakter:**\nOmrådet rundt Markveien 56 preges av et variert tilbud som kombinerer:\n- Dagligvarehandel og servicevirksomheter for lokalbefolkning\n- Destinasjonshandel og spisesteder for besøkende\n- Etablerte kjeder og uavhengige lokale konsepter\n- Skjønnhet, mote og interiør med fokus på unike tilbud\n\n### I dag\n\nMarkveien 56 representerer Grünerløkkas kommersielle mangfold med sin blanding av etablerte handelsbedrifter og servicetilbud. Beliggenheten i Markveien sikrer høy eksponering og stabile kundestrømmer, både fra bydelens tette boligbebyggelse og fra besøkende til områdets restauranter, kaféer og butikker.\n\nMed 153 aktører i umiddelbar nærhet er Markveien 56 del av et av Oslos mest livlige og kommersielt tette strøk, preget av kontinuerlig aktivitet og et sterkt lokalmiljø.",
+    "kontaktperson": "Ikke spesifisert",
+    "notater": [
+      "Matrikkel: Gnr. 228, Bnr. 195",
+      "Postnummer: 0550 Oslo",
+      "Beliggenhet: Mellom Olaf Ryes plass og Schous plass",
+      "Walk Score: 98/100",
+      "153 aktører i nærområdet",
+      "Markveien - nest viktigste handlegate på Grünerløkka",
+      "Variert handelsmiljø med restauranter, butikker og tjenester",
+      "Høy fottrafikk",
+      "Etablert kollektivtilbud med trikk og buss"
+    ],
+    "lenker": []
+  },
+  "metadata": {
+    "opprettet": "2025-11-11T14:00:00Z",
+    "sistOppdatert": "2025-11-11T14:00:00Z",
+    "status": "publisert",
+    "versjon": 1
+  }
+}

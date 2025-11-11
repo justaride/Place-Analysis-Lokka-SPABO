@@ -1,0 +1,112 @@
+{
+  "id": "markveien-54",
+  "adresse": "Markveien 54",
+  "gnr": 228,
+  "bnr": 192,
+  "beskrivelse": "Klassisk bolig- og forretningsgård i pusset tegl fra 1870-årene, beliggende i kjernen av Markveiens handelsakse på Grünerløkka. Bygningen består av fem etasjer med loftsetasje, oppført i enkel nyrenessanse-stil som del av grosserer Thorvald Meyers utbygging av området. Eiendommen er organisert som eierseksjonssameie med åtte boenheter og aktive næringsarealer i gateplan, og er listeført som kulturminne (ID 166782) i Riksantikvarens database. Bygården huser spesialiserte konseptbutikker innen vintage, design og bærekraft kombinert med sentrumsnære boliger.",
+  "heroImage": "/images/markveien-54/hero.jpg",
+  "mapImage": "/images/markveien-54/map.png",
+  "coordinates": {
+    "lat": 59.9215,
+    "lng": 10.7589
+  },
+  "plaaceData": {
+    "rapportDato": "2024-11-10T00:00:00Z",
+    "screenshots": [
+      {
+        "filnavn": "Nøkkeldata",
+        "path": "/images/markveien-54/nokkeldata.jpg",
+        "beskrivelse": "Nøkkeldata for området",
+        "kategori": "demografi"
+      },
+      {
+        "filnavn": "Demografi",
+        "path": "/images/markveien-54/demografi.jpg",
+        "beskrivelse": "Demografisk analyse",
+        "kategori": "demografi"
+      },
+      {
+        "filnavn": "Konkurransebildet",
+        "path": "/images/markveien-54/konkurransebildet.jpg",
+        "beskrivelse": "Konkurransebildet i området",
+        "kategori": "marked"
+      },
+      {
+        "filnavn": "Korthandel",
+        "path": "/images/markveien-54/korthandel.jpg",
+        "beskrivelse": "Korthandel analyse",
+        "kategori": "marked"
+      },
+      {
+        "filnavn": "Bevegelse",
+        "path": "/images/markveien-54/bevegelse.jpg",
+        "beskrivelse": "Bevegelsesmønster og trafikkflyt",
+        "kategori": "utvikling"
+      },
+      {
+        "filnavn": "Besøkende",
+        "path": "/images/markveien-54/besokende.jpg",
+        "beskrivelse": "Besøkende analyse",
+        "kategori": "marked"
+      }
+    ],
+    "nokkeldata": {
+      "prisniva": "Eierseksjonssameie",
+      "leieinntekter": "8 boliger + næring",
+      "befolkning": 7233,
+      "gjennomsnittsinntekt": "520 000 NOK",
+      "arbeidsledighet": 95
+    },
+    "demografi": {
+      "totalBefolkning": 7233,
+      "husstandsstorrelse": 2
+    },
+    "marked": {
+      "omsetning": 0,
+      "kvadratmeterpris": 99000
+    }
+  },
+  "tilleggsinfo": {
+    "historikk": "## Om Eiendommen\n\nMarkveien 54 er en klassisk bolig- og forretningsgård i pusset tegl fra 1870-årene, strategisk beliggende i kjernen av Markveiens handelsakse på Grünerløkka. Bygningen består av fem etasjer med loftsetasje, oppført i enkel nyrenessanse-stil som del av den intensive byutviklingen under grosserer Thorvald Meyers utbygging av området. Eiendommen er organisert som eierseksjonssameie med åtte boenheter og aktive næringsarealer i gateplan, og er listeført som kulturminne (ID 166782) i Riksantikvarens database. Bygården representerer et autentisk eksempel på Oslos «murby»-periode.\n\n### Nøkkelinformasjon\n\n**Bygningstekniske spesifikasjoner:**\n- Totalareal: Ikke offentlig spesifisert (individuell seksjonsdata varierer; typisk 47-89 m²)\n- Antall etasjer: 5 etasjer over terreng + loft\n- Antall boenheter: 8 eierseksjoner (primært bolig, enkelte næringsseksjoner)\n- Konstruksjon: Bærende teglvegger med pusset fasade – klassisk «murby»-konstruksjon\n- Byggeår: Ca. 1870-1875 (folketelling 1900 bekrefter bygningen som etablert)\n- Arkitekt: Ukjent (typisk samtidig bygging uten dokumentert arkitekt i denne perioden)\n- Stilretning: Enkel nyrenessanse med etterkrigsmodernisering av gateplan\n- Heis: Ikke installert (typisk for leiegårder fra denne perioden)\n- Oppvarming: Antatt tradisjonell vannbåren oppvarming via sentralfyr/elektrisk kjel med radiatorer\n- Ventilasjon: <span style=\"color: #dc2626; font-weight: 600;\">MANGLENDE INFO</span> (sannsynligvis naturlig ventilasjon med punktvise mekaniske løsninger)\n- Energimerking: <span style=\"color: #dc2626; font-weight: 600;\">MANGLENDE INFO - Ikke offentlig tilgjengelig</span>\n- Sikkerhet: Standard sameieorganisert brann- og sikkerhetssystemer\n- Infrastruktur: Fiber tilgjengelig; elektrisk anlegg oppgradert over tid\n\n**Fasiliteter:**\n- Aktiv gateplanhandel med direkte tilgang fra Markveien\n- Loftsetasjer i noen seksjoner\n- Felles inngangsparti og trappeløp\n- Bakgård (typisk for gårdsstruktur)\n\n### Eierskap\n\n**Juridisk eier:** Sameiet Markveien 54 (Org.nr. 997 411 048)\n**Stiftet:** 9. august 1996\n**Registrert:** 13. oktober 2011 (Foretaksregisteret)\n**Organisasjonsform:** Eierseksjonssameie (ESEK)\n**Formål:** Drift av fellesarealer og fellesinteresser for eierseksjonene i bygården\n**Forretningsadresse:** <span style=\"color: #dc2626; font-weight: 600;\">MANGLENDE INFO</span>\n\n**Eierstruktur:** Eiendommen er organisert som eierseksjonssameie hvor hver seksjon eies individuelt av private personer eller foretak.\n\n**Eierkjede:**\nIndividuelle seksjonseiere (boliger og næring)\n ↓\nSAMEIET MARKVEIEN 54 (fellesorganisasjon)\n ↓\nECIT Norian AS (forretningsfører)\n\n**Daglig drift:** ECIT Norian AS\n**Adresse:** Stortingsgata 2, 0158 Oslo\n**Tjenester:** Profesjonell forretningsførsel, regnskap, juridisk bistand, digitale styreverktøy\n**Profil:** Etablert aktør innen sameieforvaltning med spesialisering på tett bybebyggelse og vernede bygninger\n\n**Sameiets organisering:**\n- Antall seksjoner: 8 (primært bolig, enkelte næringsseksjoner)\n- Styrestruktur: Styret velges blant seksjonseiere\n- Beslutningsstruktur: Ordinær generalforsamling iht. eierseksjonsloven\n- Felleskostnader: Dekker drift, vedlikehold, forsikring, forretningsførsel\n\n**Nøkkelpersoner:**\n<span style=\"color: #dc2626; font-weight: 600;\">MANGLENDE INFO</span>\n\n### Beliggenhet\n\nMarkveien 54 ligger i det mest trafikkerte og kommersielt attraktive segmentet av Markveien, posisjonert mellom to av Grünerløkkas viktigste offentlige rom:\n\n- **Olav Ryes plass** (100-150 meter nordvest) – Grünerløkkas sosiale hjerte med «Gullrekka» av restauranter og kafeer\n- **Birkelunden** (200-250 meter nordøst) – Historisk park fra 1860-årene med søndagsmarked\n- **Sofienbergparken** (300-400 meter sør) – Grünerløkkas største park\n- Walk Score: 98-100/100 (Walker's Paradise)\n- Trikk: Olav Ryes plass (150m, 2-3 min) – Linjer 11, 12, 13, 17, 18\n- Trikk: Birkelunden (250m, 3-4 min)\n- Frekvens: Ca. hvert 4. minutt i rushtid\n- Reisetid til Oslo S: 10-15 minutter\n- Buss: Jakob Kirke (145m), Sofienbergparken (338m) – Linjer 34, 54, 126, 11N, 12N, 21, 26, 30, 31, 37\n- Sykkelvennlig: Markveien oppgradert som sykkelprioritert gate, bysykkelstasjoner i umiddelbar nærhet\n\n**Markveien som handelsakse:**\n\nMarkveien fikk sitt navn fra tiden da området mellom Akerselva og Trondheimsveien ble brukt som beitemark for slaktedyr. Ved byutvidelsen i 1859 ble gaten innlemmet i byen, og utviklet seg raskt til en av Grünerløkkas viktigste handelsårer. Sammen med Thorvald Meyers gate er Markveien i dag Grünerløkkas viktigste forretningsgate.\n\n**Oppgradering 2019-2021:**\nOslo kommune gjennomførte omfattende oppgradering av Markveien. Markveien ble omgjort til gang- og sykkelprioritert gate med bredere fortau, natursteinsdekke, redusert biltrafikk og klimatilpasning (regnbed). Dette har forsterket Markveiens rolle som Grünerløkkas fremste handlegate.\n\n### Nåværende Bruk og Leietakere\n\nMarkveien 54 er en kombinasjonsbyggård med sterkt fokus på bærekraftige, kreative nisjevirksomheter i gateplan og kvalitetsorienterte boliger i etasjene over.\n\n**Næringsvirksomhet i gateplan:**\n\n**Carousel Interiør** – Vintage interiør og møbler. Eier: Anja Marie Andersen. Etablert i Markveien 54 i 2019 (noen kilder oppgir 2023 for utvidelse). Konsept: Kuratert vintage interiør, lamper, møbler, vaser, pynteting. Profil: Bærekraftig interiør med fokus på kvalitet og historie. Tilleggslokasjon: Blomsteravdeling i Grüners gate.\n\n**Hasla / Hasla Brand Store** – Norsk smykkedesign. Konsept: Smykkeverksted og butikk. Profil: Norskprodusert smykkedesign med fokus på håndverk. Kombinasjon produksjon/salg: Verksted og showroom.\n\n**Past Workshop (Livid Group)** – Vintage klær. Konsept: Kuratert vintage med stort utvalg av vintage jeans, skjorter, gensere og tilbehør. Del av Oslo Vintage-økosystemet: Past Workshop er del av Livid Groups portefølje. Profil: Høykvalitets vintage med fokus på klassiske amerikanere og europeisk garderobe.\n\n**Babel Butikken** – Arkitektfirma. Konsept: Arkitektur- og designtjenester. Plassering: Mindre, kreativt kontormiljø i eiendommen.\n\n**Helsetjenester:**\n\n**Tannlege Marianne Tryggestad** – Privat tannlegetjeneste registrert på adressen. Illustrerer blandet bruk med både detaljhandel og helsetjenester.\n\n**Boligseksjoner:**\n8 privateide leiligheter i etasjene over gateplan (2.-5. etasje + loft). Typisk størrelse: 47-89 m² per boenhet. Sentrumsnære boliger med høy standard etter renovering.\n\n**Utleiestatus og belegg:**\n- Næringsdel: Full belegg per november 2025 (alle gateplan-enheter aktive)\n- Boligdel: Privateide seksjoner – ingen utleiedata tilgjengelig\n- Vakanserisiko: Lav pga. svært attraktiv beliggenhet og sterk handel i Markveien\n\n### Handelsområde\n\nMarkveien utgjør Grünerløkkas handelshubaksel med ekstremt aktivt handelsmiljø:\n- **166 registrerte aktører** i nærområdet\n- 62 restauranter og spisesteder\n- 17 skjønnhet- og velvære-virksomheter\n- 16 klesbutikker\n- 15 matbutikker\n- 11 hjem og interiør-butikker\n- 10 annen handel\n- 9 sport og fritid\n- 7 puber og barer\n- 7 bakerier og kafeer\n\nMarkveien representerer en av Oslos mest konsentrerte handelskorridorer med sterk lokal identitet.\n\n### Økonomiske Nøkkeltall\n\n**Merknad:** Eierseksjonssameier publiserer ikke fullstendige økonomiske resultatregnskaper på samme måte som kommersielle eiendomsselskaper.\n\n| Parameter | Verdi/Kommentar |\n|-----------|------------------|\n| Organisasjonsform | Eierseksjonssameie (ESEK) |\n| Antall seksjoner | 8 (bolig + næring) |\n| Estimert total markedsverdi | 50-60 MNOK (basert på gjennomsnittlige salgspriser) |\n| Gjennomsnittlig kvadratmeterpris (2024-2025) | 99 000-105 000 NOK |\n| Prisvekst siste 5 år | +3-7% årlig (varierende markedsforhold) |\n| Typisk salgstid | 29-49 dager (Grünerløkka-gjennomsnitt 2024) |\n| Felleskostnader per seksjon | <span style=\"color: #dc2626; font-weight: 600;\">MANGLENDE INFO</span> (varierer med seksjonsstørrelse) |\n| Gjeld | Ikke relevant (individuelle seksjoner har egne lån) |\n\n**Verdiutvikling (dokumenterte transaksjoner):**\n- 2010: Leilighet 52 m² (5. etg) solgt for 2 100 000 NOK (ca. 40 400 NOK/m²)\n- 2015: Samme leilighet solgt for 3 610 000 NOK (ca. 69 400 NOK/m²) – **+72% på 5 år**\n- 2018: Leilighet 47 m² (5. etg) solgt for 4 610 000 NOK (ca. 98 100 NOK/m²)\n- 2020: Leilighet 89 m² (2. etg) solgt for 8 300 000 NOK (ca. 93 300 NOK/m²)\n- 2024: Samme leilighet solgt for 8 825 000 NOK (ca. 99 200 NOK/m²)\n- 2025: Seksjon 8 tinglyst for 1-2 MNOK (mindre seksjon eller næringsdel)\n\n### Historikk\n\n**1870-1875: Opprinnelse og Murby-perioden**\n\nMarkveien 54 ble oppført i perioden 1870-1875 som del av den massive leiegårdsutbyggingen på Grünerløkka under grosserer **Thorvald Meyers** private byutvikling. Meyer kjøpte Grünerløkka-området i 1861 og gjennomførte i de påfølgende tiårene en fullstendig transformasjon av det tidligere beitemarksområdet til tett bybebyggelse. Bygningen representerer typologien som preget Oslo-murby: 4-5 etasjer i pusset tegl, enkel nyrenessanse-detaljer, bærende teglvegger og småleiligheter for arbeiderklassen.\n\n**1900: Folketelling**\n\nFolketelling 1900 dokumenterer at bygningen på dette tidspunktet hadde 8 leiligheter fordelt over 4 etasjer, med butikklokaler og forretninger i første etasje – en typisk kombinasjon for Markveiens handelsfunksjon allerede på denne tiden.\n\n**1910: Arbeiderklasseboliger og småvirksomhet**\n\nFolketelling 1910 gir et detaljert øyeblikksbilde av bygningens sosiale struktur: 37-38 personer bodde fordelt på de 8 leilighetene. Eksempelvis dokumenterer tellingen:\n- Leilighet 5 (3. etasje): Familie på fire personer med månedlig husleie på 35 NOK\n- Husstandsoverhode Emilie Fredrikke Greni drev strykeforretning fra leiligheten\n- Sønn: Student, Datter: Kontordame\n\nDette eksempelet illustrerer den blandede bruken av leiligheter både som bolig og arbeidssted, samt den økonomiske strukturen i arbeiderklassestrøket. Bygningen fungerte som et mikrokosmos av Grünerløkkas industrisamfunn med hjemmebasert småindustri, kontorarbeid og serviceyrker.\n\n**1960-tallet: Sanerings-trusselen og bevaring**\n\nPå 1960-tallet ble hele Grünerløkka truet av omfattende saneringsplaner. Oslo kommune planla motorvei tvers gjennom området, noe som ville revet ned store deler av den historiske bebyggelsen inkludert Markveien 54. Stor lokal motstand – med dannelsen av Grünerløkka leieboerforening som sentral aktør – stoppet planene. **\"Slaget om Grünerløkka\" i 1977** markerte et definitivt vendepunkt der bevaringstanken seiret over saneringspolitikken.\n\n**9. august 1996: Seksjonering**\n\nSameiet Markveien 54 ble stiftet, noe som indikerer at eiendommen ble seksjonert på midten av 1990-tallet – i tråd med den generelle trenden der gamle leiegårder ble omgjort til eierseksjonssameier under Grünerløkkas transformasjon fra arbeiderklassestrøk til attraktiv sentrumsbydel.\n\n**13. oktober 2011: Formell registrering**\n\nFormell registrering av Sameiet Markveien 54 i Foretaksregisteret med organisasjonsnummer 997 411 048. ECIT Norian AS ble etablert som profesjonell forretningsfører, noe som sikret strukturert drift og vedlikehold.\n\n**2010-2025: Verdiutvikling og moderne nisjehandel**\n\nEiendommens verdiutvikling reflekterer Grünerløkkas eksplosive prisøkning. Samtidig har gateplanet utviklet seg fra tradisjonelle butikker til spesialiserte konseptbutikker:\n- 2019: Carousel Interiør etablerte seg i Markveien 54\n- 2020-årene: Past Workshop (vintage klær), Hasla Brand Store (smykker) og andre nisjeaktører etablerer seg\n\n**2019-2021: Markveiens oppgradering**\n\nOslo kommune gjennomførte omfattende oppgradering av Markveien, Thorvald Meyers gate og Toftes gate. Markveien ble omgjort til gang- og sykkelprioritert gate med bredere fortau, natursteinsdekke, fornyelse av vann- og avløpsnett, etablering av regnbed på Olav Ryes plass for klimatilpasning, og redusert biltrafikk. Oppgraderingen har forsterket Markveiens rolle som Grünerløkkas fremste handlegate og økt attraktiviteten for gående trafikk og uteservering.\n\n**I dag:**\n\nMarkveien 54 står som et bevart kulturminne med levende virksomhet i hjertet av Markveiens handelsakse. Eiendommen kombinerer historisk autentisitet med moderne bærekraftig næringsliv.\n\n### Regulatorisk Status\n\n**Gjeldende planer:**\n- Kommuneplan Oslo 2015: Nåværende bebyggelse og anlegg (fortetning innenfor eksisterende byggeområder)\n- Områderegulering: Markveien inngår i tett bykjerne med historisk vernekarakter\n- Fredningsvedtak Birkelunden 2006: Omfatter 15 kvartaler med 139 bygårder, Paulus kirke, Grünerløkka skole og parken – Markveien 54 ligger i umiddelbar nærhet til fredet område\n- Nåværende formål: Bolig/forretning (kombinert bruk)\n- Tillatt bruk: Boliger, detaljhandel, kontorer, mindre servicevirksomheter\n- Ikke tillatt: Tung industri, store volum, fasadeendringer som bryter med historisk uttrykk\n\n**Vernestatus:**\n\n**Riksantikvarens database:**\n- Kulturminne-ID: 166782\n- Status: Listeført (Byantikvarens Gule liste)\n- Betydning: Eiendommen er del av et større, helhetlig bygårdsmiljø fra 1800-tallet som anses som nasjonalt viktig kulturminneområde\n\n**Praktiske implikasjoner av listeføring:**\n- Alle eksteriøre tiltak (fasade, vinduer, dører, tak, skilt, belysning) krever tidlig dialog med Byantikvaren\n- PBE (Plan- og bygningsetaten) innhenter rådgivende uttalelse fra Byantikvaren før godkjenning\n- Varsomhetsprinsippet praktiseres: Endringer skal ta hensyn til historisk karakter\n- Tiltak skal dokumentere at opprinnelig materialbruk og uttrykk respekteres\n\n**Byggesakshistorikk:**\n<span style=\"color: #dc2626; font-weight: 600;\">MANGLENDE INFO</span> – Ingen kjente større byggesaker de siste årene.\n\n**Utviklingspotensial:**\n\n**Konklusjon: Svært begrenset utviklingspotensial**\n\nEiendommens utviklingsmuligheter er sterkt begrenset av følgende faktorer:\n1. **Vernestatus (Gul liste):** Eksteriøre tiltak må godkjennes av Byantikvaren – påbygg, fasadeendringer og volumøkninger vil normalt ikke tillates\n2. **Høyde og volum:** Bygningen er allerede 5 etasjer, noe som er høyt for området – ytterligere påbygg vil bryte med gatebildet\n3. **Konstruksjon:** Bærende teglvegger begrenser muligheten for store strukturelle endringer\n4. **Historisk gatesnitt:** Markveien er sterkt beskyttet som helhetlig handelsgate fra 1880-90-årene\n\n**Realistiske utviklingstiltak:**\n- **Indre rehabilitering:** Oppgradering av leiligheter med moderne standarder (bad, kjøkken, varme)\n- **Energieffektivisering:** Skånsomme tiltak som ikke påvirker fasade (indre isolasjon, vindusoppgradering med godkjenning)\n- **Loft- og kjellerutbygging:** Optimalisering av eksisterende volum uten eksteriøre endringer\n- **Gateplanoptimalisering:** Tilpasning av interne arealer for moderne handelsbehov\n\n**I dag**\n\nMarkveien 54 forvaltes med fokus på bevaring av historisk karakter og videreføring av stabil blandingsbruk. ECIT Norian AS sikrer profesjonell drift og verdibevarelse.",
+    "kontaktperson": "ECIT Norian AS - Stortingsgata 2, 0158 Oslo",
+    "notater": [
+      "Byggeår: Ca. 1870-1875",
+      "Arkitekt: Ukjent",
+      "Eierseksjonssameie - 8 seksjoner",
+      "ECIT Norian AS forvalter",
+      "Kulturminne-ID: 166782 (Riksantikvaren)",
+      "Byantikvarens Gule liste",
+      "Thorvald Meyers utbygging",
+      "Folketelling 1910: 37-38 personer i 8 leiligheter",
+      "Slaget om Grünerløkka 1977",
+      "Seksjonert 1996",
+      "Oppgradering Markveien 2019-2021",
+      "Kvadratmeterpris 2024: ca. 99 000 NOK",
+      "Prisvekst 2010-2015: +72%",
+      "166 aktører i handelsområdet",
+      "Carousel Interiør, Hasla, Past Workshop",
+      "Walk Score: 98-100/100",
+      "Ingen heis"
+    ],
+    "lenker": [
+      {
+        "tekst": "Carousel Interiør",
+        "url": "https://www.carouselinterior.no"
+      },
+      {
+        "tekst": "Past Workshop",
+        "url": "https://www.pastworkshop.com"
+      },
+      {
+        "tekst": "ECIT Norian",
+        "url": "https://www.ecit.no"
+      }
+    ]
+  },
+  "metadata": {
+    "opprettet": "2025-11-11T12:45:00Z",
+    "sistOppdatert": "2025-11-11T13:00:00Z",
+    "status": "publisert",
+    "versjon": 2
+  }
+}

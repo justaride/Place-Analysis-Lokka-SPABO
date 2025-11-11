@@ -8,6 +8,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      gridTemplateColumns: {
+        '24': 'repeat(24, minmax(0, 1fr))',
+        '8': 'repeat(8, minmax(0, 1fr))',
+      },
+      gap: {
+        'natural': '11px',
+      },
+      maxWidth: {
+        'natural': '1900px',
+      },
       colors: {
         brand: {
           50: '#f0fdf4',
@@ -23,11 +33,11 @@ const config: Config = {
           950: '#052e16',
         },
         lokka: {
-          primary: '#2C5F2D',    // Mørk grønn
-          secondary: '#97BC62',   // Lys grønn
-          accent: '#F4A259',      // Oransje accent
-          neutral: '#2D3748',     // Mørk grå
-          light: '#F7FAFC',       // Lys bakgrunn
+          primary: '#2C5F2D',
+          secondary: '#97BC62',
+          accent: '#F4A259',
+          neutral: '#2D3748',
+          light: '#F7FAFC',
         },
       },
       fontFamily: {
@@ -35,8 +45,9 @@ const config: Config = {
         display: ['var(--font-display)', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
-        'soft': '0 2px 15px rgba(0, 0, 0, 0.08)',
-        'medium': '0 4px 20px rgba(0, 0, 0, 0.12)',
+        'soft': '0 2px 15px rgba(0, 0, 0, 0.06)',
+        'medium': '0 4px 20px rgba(0, 0, 0, 0.08)',
+        'large': '0 10px 40px rgba(0, 0, 0, 0.1)',
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

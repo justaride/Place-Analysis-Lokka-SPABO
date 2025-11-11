@@ -1,0 +1,91 @@
+{
+  "id": "seilduksgata-7",
+  "adresse": "Seilduksgata 7",
+  "gnr": 209,
+  "bnr": 1,
+  "beskrivelse": "Moderne næringseiendom i det transformerte Vulkan-området ved Akerselva på Grünerløkka. Eiendommen ligger sentralt i Mathallen-kvartalet, omgitt av et levende miljø med mat, kultur og kreative virksomheter. Prime beliggenhet i et av Oslos mest dynamiske utviklingsområder med høy fotgjengertrafikk og attraktive publikumsvirksomheter.",
+  "heroImage": "/images/seilduksgata-7/hero.jpg",
+  "mapImage": "/images/seilduksgata-7/map.png",
+  "coordinates": {
+    "lat": 59.9223,
+    "lng": 10.7523
+  },
+  "plaaceData": {
+    "rapportDato": "2024-11-11T00:00:00Z",
+    "screenshots": [
+      {
+        "filnavn": "Nøkkeldata",
+        "path": "/images/seilduksgata-7/nokkeldata.jpg",
+        "beskrivelse": "Nøkkeldata for området",
+        "kategori": "demografi"
+      },
+      {
+        "filnavn": "Demografi",
+        "path": "/images/seilduksgata-7/demografi.jpg",
+        "beskrivelse": "Demografisk analyse",
+        "kategori": "demografi"
+      },
+      {
+        "filnavn": "Konkurransebildet",
+        "path": "/images/seilduksgata-7/konkurransebildet.jpg",
+        "beskrivelse": "Konkurransebildet i området",
+        "kategori": "marked"
+      },
+      {
+        "filnavn": "Bevegelse",
+        "path": "/images/seilduksgata-7/bevegelse.jpg",
+        "beskrivelse": "Bevegelsesmønster og trafikkflyt",
+        "kategori": "utvikling"
+      },
+      {
+        "filnavn": "Besøkende",
+        "path": "/images/seilduksgata-7/besokende.jpg",
+        "beskrivelse": "Besøkende analyse",
+        "kategori": "marked"
+      }
+    ],
+    "nokkeldata": {
+      "prisniva": "Næringseiendom",
+      "leieinntekter": "Varierende",
+      "befolkning": 7200,
+      "gjennomsnittsinntekt": "580 000 NOK",
+      "arbeidsledighet": 95
+    },
+    "demografi": {
+      "totalBefolkning": 7200,
+      "husstandsstorrelse": 2
+    },
+    "marked": {
+      "omsetning": 0,
+      "kvadratmeterpris": 0
+    }
+  },
+  "tilleggsinfo": {
+    "historikk": "## Om Eiendommen\n\nSeilduksgata 7 er en moderne næringseiendom strategisk plassert i det transformerte Vulkan-området ved Akerselva på Grünerløkka. Eiendommen inngår i Mathallen-kvartalet, et av Oslos mest vellykkede byutviklingsprosjekter som har gjenopplivet industriarven langs elva.\n\n### Nøkkelinformasjon\n\n**Bygningstekniske spesifikasjoner:**\n- Moderne næringseiendom\n- Del av Vulkan-utviklingen\n- Nærhet til Mathallen Oslo\n- Sentral beliggenhet ved Akerselva miljøpark\n\n**Fasiliteter:**\n- Næringslokaler med publikumsfokus\n- Moderne fasiliteter\n- Grøntområder langs Akerselva\n- Gode kollektivforbindelser\n\n### Beliggenhet\n\nEiendommen har en attraktiv plassering i Vulkan-området:\n- Del av Mathallen-kvartalet ved Akerselva\n- Høy fotgjengertrafikk fra mat- og kulturvirksomheter\n- Kort avstand til Mathallen Oslo\n- Vulkan Arena i umiddelbar nærhet\n- Walk Score: 98/100 (Walker's Paradise)\n- Trikk: Linjer 11, 12, 13 ved Schous plass (5 min)\n- Etablert sykkelinfrastruktur langs Akerselva\n- Nær Ring 2 og E6\n\n### Handels- og Kulturområde\n\nVulkan-området har etablert seg som et levende mat- og kulturknutepunkt:\n- 133 registrerte aktører i nærområdet\n- 39 restauranter og spisesteder\n- 18 skjønnhet- og velvære-virksomheter\n- 13 bakerier og kafeer\n- 13 klesbutikker\n- Mathallen Oslo som hovedattraksjon\n- Variert tilbud fra gourmet til dagligvare\n\n### Historikk\n\n**Industrielt arnested (1800-1900-tallet)**\nSeilduksgata og Vulkan-området var i sin tid et av Oslos viktigste industriområder langs Akerselva. Området var preget av tung industri, verksteder og fabrikker som utnyttet vannkraften fra elva.\n\n**Nedgang og transformasjon (1970-2000-tallet)**\nEtter industriens nedgang lå området brakk i flere tiår. På 2000-tallet startet den omfattende transformasjonen av Vulkan-området, med vekt på å bevare industriarven samtidig som man skapte et nytt levende bymiljø.\n\n**Mathallen og moderne utvikling (2012-)**\nMathallen Oslo åpnet i 2012 i de gamle industrihallene og ble raskt en suksess. Dette skapte grunnlaget for videre utvikling av området med fokus på mat, kultur og kreative næringer. Vulkan har utviklet seg til et av Oslos mest attraktive destinasjonsområder.\n\n**Vulkan i dag**\nOmrådet representerer vellykket byutvikkling med balanse mellom historisk arv og moderne bruk. Seilduksgata 7 inngår i et levende byrom med høy aktivitet hele uken.\n\n### Regulatorisk Status\n\n**Gjeldende planer:**\n- Kommuneplan: Indre by, transformasjonsområde\n- Formål: Bebyggelse og anlegg, blandet bruk (næring/kultur)\n- Del av Vulkan-områdets reguleringsplan\n- Krav til publikumsrettede virksomheter i deler av området\n\n**Vernehensyn:**\nOmrådet har fokus på å bevare industriell karakter og historiske elementer der det er mulig, samtidig som man legger til rette for moderne bruk.\n\n**I dag**\nSeilduksgata 7 står som en integrert del av Mathallen-kvartalet med levende publikumsvirksomhet og moderne næringsliv i et historisk industriområde.",
+    "kontaktperson": "Kontaktinfo tilgjengelig via offentlige registre",
+    "notater": [
+      "Moderne næringseiendom",
+      "Del av Vulkan/Mathallen-området",
+      "Høy fotgjengertrafikk",
+      "Nærhet til Mathallen Oslo",
+      "133 registrerte aktører i området",
+      "Transformert industriområde"
+    ],
+    "lenker": [
+      {
+        "tekst": "Mathallen Oslo",
+        "url": "https://mathallen.no"
+      },
+      {
+        "tekst": "Vulkan",
+        "url": "https://vulkanoslo.no"
+      }
+    ]
+  },
+  "metadata": {
+    "opprettet": "2025-11-11T08:30:00Z",
+    "sistOppdatert": "2025-11-11T08:30:00Z",
+    "status": "publisert",
+    "versjon": 1
+  }
+}
