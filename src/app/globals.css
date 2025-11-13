@@ -12,9 +12,24 @@
 
   --font-sans: var(--font-inter), system-ui, sans-serif;
 
+  /* Shadows */
   --shadow-soft: 0 2px 15px rgba(0, 0, 0, 0.06);
   --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.08);
   --shadow-large: 0 10px 40px rgba(0, 0, 0, 0.1);
+
+  /* Spacing System - T-shirt sizing */
+  --space-xs: 0.5rem;    /* 8px */
+  --space-sm: 1rem;      /* 16px */
+  --space-md: 2rem;      /* 32px */
+  --space-lg: 4rem;      /* 64px */
+  --space-xl: 6rem;      /* 96px */
+  --space-2xl: 8rem;     /* 128px */
+
+  /* Component-specific spacing */
+  --space-section: var(--space-lg);
+  --space-card: var(--space-md);
+  --space-element: var(--space-sm);
+  --space-tight: var(--space-xs);
 }
 
 @layer base {
@@ -22,8 +37,60 @@
     --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
   }
 
+  * {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lokka-primary focus-visible:ring-offset-2;
+  }
+
   body {
     background-color: var(--color-lokka-light);
     color: var(--color-lokka-neutral);
+    font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  p {
+    line-height: 1.7;
+  }
+
+  /* Skip to main content link for screen readers */
+  .skip-to-content {
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+  }
+
+  .skip-to-content:focus {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1rem;
+    background: var(--color-lokka-primary);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }

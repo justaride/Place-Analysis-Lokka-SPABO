@@ -7,6 +7,7 @@ import { cn } from '@/lib/utils';
 const navItems = [
   { href: '/', label: 'Forside' },
   { href: '/eiendommer', label: 'Eiendommer' },
+  { href: '/sammenlign', label: 'Sammenlign', icon: '⚖️' },
   { href: '/om-prosjektet', label: 'Om Prosjektet' },
 ];
 
@@ -25,12 +26,13 @@ export default function Navigation() {
             key={item.href}
             href={item.href}
             className={cn(
-              'rounded-lg px-5 py-2.5 text-sm font-medium transition-all duration-200',
+              'rounded-lg px-5 py-2.5 text-sm font-medium transition-all duration-200 flex items-center gap-1.5',
               isActive
                 ? 'bg-lokka-primary text-white shadow-sm'
                 : 'text-lokka-secondary hover:bg-gray-50 hover:text-lokka-primary'
             )}
           >
+            {'icon' in item && item.icon && <span className="text-base">{item.icon}</span>}
             {item.label}
           </Link>
         );

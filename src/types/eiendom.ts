@@ -39,6 +39,11 @@ export interface Nokkeldata {
   befolkning?: number;
   gjennomsnittsinntekt?: string;
   arbeidsledighet?: number;
+  areal?: string;
+  arealKontor?: string;
+  arealServering?: string;
+  byggeaar?: string;
+  energimerke?: string;
 }
 
 export interface DemografiData {
