@@ -22,6 +22,47 @@ export const NokkelDataSchema = z.object({
   arbeidsledighet: z.number().min(0).max(100).optional(),
 });
 
+export const AnalyseParametereSchema = z.object({
+  gangeavstand: z.string().optional(),
+  radius: z.number().optional(),
+  transporttype: z.enum(['gange', 'sykkel', 'bil', 'kollektiv']).optional(),
+  notater: z.string().optional(),
+});
+
+export const PlaaceAnalyseSchema = z.object({
+  id: z.string().min(1),
+  tittel: z.string().min(1),
+  beskrivelse: z.string().optional(),
+  parametere: AnalyseParametereSchema,
+  rapportDato: z.string().datetime(),
+  screenshots: z.array(ScreenshotSchema),
+  nokkeldata: NokkelDataSchema,
+  demografi: z
+    .object({
+      totalBefolkning: z.number().optional(),
+      befolkningsutvikling: z.number().optional(),
+      aldersfordeling: z
+        .object({
+          '0-17': z.number(),
+          '18-29': z.number(),
+          '30-49': z.number(),
+          '50-66': z.number(),
+          '67+': z.number(),
+        })
+        .optional(),
+      husstandsstorrelse: z.number().optional(),
+    })
+    .optional(),
+  marked: z
+    .object({
+      omsetning: z.number().optional(),
+      transaksjoner: z.number().optional(),
+      prisutviklingProsent: z.number().optional(),
+      kvadratmeterpris: z.number().optional(),
+    })
+    .optional(),
+});
+
 export const PlaaceDataSchema = z.object({
   rapportDato: z.string().datetime(),
   screenshots: z.array(ScreenshotSchema).min(1),
@@ -65,6 +106,7 @@ export const EiendomSchema = z.object({
     lng: z.number(),
   }).optional(),
   plaaceData: PlaaceDataSchema,
+  plaaceAnalyses: z.array(PlaaceAnalyseSchema).optional(),
   tilleggsinfo: z.object({
     historikk: z.string().optional(),
     kontaktperson: z.string().optional(),

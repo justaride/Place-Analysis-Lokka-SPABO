@@ -64,13 +64,6 @@ export default async function AnalysePage({ params }: PageProps) {
     notFound();
   }
 
-  // Find the specific analysis
-  const currentAnalyse = eiendom.plaaceAnalyses?.find(a => a.id === analyse);
-
-  if (!currentAnalyse) {
-    notFound();
-  }
-
   // Load aktør data if available for this property
   let aktorData = null;
   let totalRevenue = 0;
@@ -95,6 +88,34 @@ export default async function AnalysePage({ params }: PageProps) {
     }
   } catch (error) {
     // Aktør data is optional - no error if file doesn't exist
+  }
+
+  // Find the specific analysis or create from legacy data
+  let currentAnalyse = eiendom.plaaceAnalyses?.find(a => a.id === analyse);
+
+  // If no plaaceAnalyses array or analysis not found, check if we should fall back to plaaceData
+  if (!currentAnalyse) {
+    // For 5min-gange, we can use the legacy plaaceData as fallback
+    if (analyse === '5min-gange' && eiendom.plaaceData) {
+      // Create a temporary analysis from plaaceData
+      currentAnalyse = {
+        id: '5min-gange',
+        tittel: '5 minutters gange',
+        beskrivelse: 'Plaace-analyse basert på 5 minutters gangeavstand',
+        parametere: {
+          gangeavstand: '5 minutter',
+          transporttype: 'gange' as const
+        },
+        rapportDato: eiendom.plaaceData.rapportDato,
+        screenshots: eiendom.plaaceData.screenshots,
+        nokkeldata: eiendom.plaaceData.nokkeldata,
+        demografi: eiendom.plaaceData.demografi,
+        marked: eiendom.plaaceData.marked
+      };
+    } else {
+      // Otherwise, page not found
+      notFound();
+    }
   }
 
   return (
