@@ -29,6 +29,7 @@ import ExecutiveSummary from '@/components/analytics/ExecutiveSummary';
 import QuickInsight from '@/components/analytics/QuickInsight';
 import HusholdningerChart from '@/components/analytics/HusholdningerChart';
 import TabbedSection from '@/components/ui/TabbedSection';
+import StickyNav from '@/components/ui/StickyNav';
 import { Users, DollarSign, Home, Clock, BarChart3, Map, Globe, Activity, CreditCard, Store } from 'lucide-react';
 
 interface PageProps {
@@ -395,9 +396,20 @@ export default async function AnalysePage({ params }: PageProps) {
             </Container>
           </section>
 
+          {/* Sticky Navigation */}
+          <StickyNav
+            sections={[
+              { id: 'demografi', label: 'Demografi', icon: <Users className="h-4 w-4" /> },
+              { id: 'bevegelse', label: 'Besøksmønster', icon: <Activity className="h-4 w-4" /> },
+              { id: 'opprinnelse', label: 'Opprinnelse', icon: <Globe className="h-4 w-4" /> },
+              { id: 'korthandel', label: 'Korthandel', icon: <CreditCard className="h-4 w-4" /> },
+              { id: 'konkurransebilde', label: 'Konkurransebilde', icon: <Store className="h-4 w-4" /> }
+            ]}
+          />
+
           {/* Demografi Section */}
           {analyseSpecificData.demografi && (
-            <section className="border-t border-gray-200/30 bg-white py-12 md:py-16">
+            <section id="demografi" className="border-t border-gray-200/30 bg-white py-12 md:py-16">
               <Container>
                 <FadeIn>
                   <div className="mb-6 flex items-center gap-3 md:mb-8">
@@ -473,7 +485,7 @@ export default async function AnalysePage({ params }: PageProps) {
 
           {/* Bevegelse Section */}
           {analyseSpecificData.bevegelse && (
-            <section className="border-t border-gray-200/30 bg-gray-50 py-12 md:py-16">
+            <section id="bevegelse" className="border-t border-gray-200/30 bg-gray-50 py-12 md:py-16">
               <Container>
                 <FadeIn>
                   <div className="mb-6 flex items-center gap-3 md:mb-8">
@@ -559,7 +571,7 @@ export default async function AnalysePage({ params }: PageProps) {
 
           {/* Visitor Origin Section */}
           {analyseSpecificData.bevegelse && (analyseSpecificData.bevegelse.opprinnelseOmråder || analyseSpecificData.bevegelse.opprinnelseLand) && (
-            <section className="border-t border-gray-200/30 bg-white py-12 md:py-16">
+            <section id="opprinnelse" className="border-t border-gray-200/30 bg-white py-12 md:py-16">
               <Container>
                 <FadeIn>
                   <div className="mb-6 flex items-center gap-3 md:mb-8">
@@ -615,7 +627,7 @@ export default async function AnalysePage({ params }: PageProps) {
 
           {/* Korthandel Section */}
           {analyseSpecificData.korthandel && (
-            <section className="border-t border-gray-200/30 bg-gray-50 py-12 md:py-16">
+            <section id="korthandel" className="border-t border-gray-200/30 bg-gray-50 py-12 md:py-16">
               <Container>
                 <FadeIn>
                   <div className="mb-6 flex items-center gap-3 md:mb-8">
@@ -691,7 +703,7 @@ export default async function AnalysePage({ params }: PageProps) {
 
           {/* Konkurransebilde Section */}
           {analyseSpecificData.konkurransebilde && (
-            <section className="border-t border-gray-200/30 bg-gray-50 py-12 md:py-16">
+            <section id="konkurransebilde" className="border-t border-gray-200/30 bg-gray-50 py-12 md:py-16">
               <Container>
                 <FadeIn>
                   <div className="mb-6 flex items-center gap-3 md:mb-8">
