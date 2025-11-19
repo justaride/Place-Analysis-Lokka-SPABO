@@ -28,6 +28,8 @@ import LandChart from '@/components/analytics/LandChart';
 import ExecutiveSummary from '@/components/analytics/ExecutiveSummary';
 import QuickInsight from '@/components/analytics/QuickInsight';
 import HusholdningerChart from '@/components/analytics/HusholdningerChart';
+import TabbedSection from '@/components/ui/TabbedSection';
+import { Users, DollarSign, Home, Clock, BarChart3, Map, Globe } from 'lucide-react';
 
 interface PageProps {
   params: Promise<{
@@ -414,49 +416,52 @@ export default async function AnalysePage({ params }: PageProps) {
                   </QuickInsight>
                 </div>
 
-                {/* Aldersfordeling */}
-                <div className="mb-8 md:mb-12">
-                  <h3 className="mb-4 text-lg font-semibold text-lokka-primary md:text-xl">
-                    Aldersfordeling
-                  </h3>
-                  <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
-                    <AldersfordelingPyramid data={analyseSpecificData.demografi.aldersfordeling} />
-                  </div>
-                </div>
-
-                {/* Inntektsfordeling */}
-                <div className="mb-8 md:mb-12">
-                  <h3 className="mb-4 text-lg font-semibold text-lokka-primary md:text-xl">
-                    Inntektsfordeling
-                  </h3>
-                  <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
-                    <InntektsfordelingChart data={analyseSpecificData.demografi.inntektsfordeling} />
-                  </div>
-                </div>
-
-                {/* Medianinntekt per husholdningstype */}
-                {analyseSpecificData.demografi.medianInntektPerHusholdstype && (
-                  <div className="mb-8 md:mb-12">
-                    <h3 className="mb-4 text-lg font-semibold text-lokka-primary md:text-xl">
-                      Medianinntekt per husholdningstype
-                    </h3>
-                    <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
-                      <MedianinntektChart data={analyseSpecificData.demografi.medianInntektPerHusholdstype} />
-                    </div>
-                  </div>
-                )}
-
-                {/* Husholdninger */}
-                {analyseSpecificData.demografi.husholdninger && (
-                  <div>
-                    <h3 className="mb-4 text-lg font-semibold text-lokka-primary md:text-xl">
-                      Husholdningstyper
-                    </h3>
-                    <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
-                      <HusholdningerChart data={analyseSpecificData.demografi.husholdninger} />
-                    </div>
-                  </div>
-                )}
+                {/* Tabbed Demographics */}
+                <TabbedSection
+                  defaultTab="alder"
+                  tabs={[
+                    {
+                      id: 'alder',
+                      label: 'Aldersfordeling',
+                      icon: <Users className="h-4 w-4" />,
+                      content: (
+                        <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
+                          <AldersfordelingPyramid data={analyseSpecificData.demografi.aldersfordeling} />
+                        </div>
+                      )
+                    },
+                    {
+                      id: 'inntekt',
+                      label: 'Inntektsfordeling',
+                      icon: <DollarSign className="h-4 w-4" />,
+                      content: (
+                        <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
+                          <InntektsfordelingChart data={analyseSpecificData.demografi.inntektsfordeling} />
+                        </div>
+                      )
+                    },
+                    ...(analyseSpecificData.demografi.medianInntektPerHusholdstype ? [{
+                      id: 'medianinntekt',
+                      label: 'Medianinntekt',
+                      icon: <BarChart3 className="h-4 w-4" />,
+                      content: (
+                        <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
+                          <MedianinntektChart data={analyseSpecificData.demografi.medianInntektPerHusholdstype} />
+                        </div>
+                      )
+                    }] : []),
+                    ...(analyseSpecificData.demografi.husholdninger ? [{
+                      id: 'husholdninger',
+                      label: 'Husholdningstyper',
+                      icon: <Home className="h-4 w-4" />,
+                      content: (
+                        <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
+                          <HusholdningerChart data={analyseSpecificData.demografi.husholdninger} />
+                        </div>
+                      )
+                    }] : [])
+                  ]}
+                />
               </Container>
             </section>
           )}
@@ -483,51 +488,61 @@ export default async function AnalysePage({ params }: PageProps) {
                   </QuickInsight>
                 </div>
 
-                {/* Per ukedag */}
-                <div className="mb-8 md:mb-12">
-                  <h3 className="mb-4 text-lg font-semibold text-lokka-primary md:text-xl">
-                    Besøk per ukedag
-                  </h3>
-                  <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
-                    <BesoksmønsterUkedag data={analyseSpecificData.bevegelse.perUkedag} />
-                  </div>
-                </div>
-
-                {/* Per time */}
-                {analyseSpecificData.bevegelse.perTime && (
-                  <div className="mb-8 md:mb-12">
-                    <h3 className="mb-4 text-lg font-semibold text-lokka-primary md:text-xl">
-                      Besøk per time
-                    </h3>
-                    <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
-                      <BesokPerTimeChart data={analyseSpecificData.bevegelse.perTime} />
-                    </div>
-                  </div>
-                )}
-
-                {/* Key Stats */}
-                <div className="mt-6 grid gap-4 md:mt-8 md:grid-cols-2">
-                  <div className="rounded-xl border border-gray-200/50 bg-lokka-light/30 p-4 md:p-6">
-                    <p className="text-sm font-medium uppercase tracking-wider text-lokka-secondary">
-                      Besøk per km²
-                    </p>
-                    <p className="mt-2 text-2xl font-bold text-lokka-primary md:text-3xl">
-                      {analyseSpecificData.bevegelse.nøkkeltall.besøkPerKm2.toLocaleString()}
-                    </p>
-                    <p className="mt-1 text-xs text-lokka-accent md:text-sm">per dag</p>
-                  </div>
-                  <div className="rounded-xl border border-gray-200/50 bg-lokka-light/30 p-4 md:p-6">
-                    <p className="text-sm font-medium uppercase tracking-wider text-lokka-secondary">
-                      Travleste dag
-                    </p>
-                    <p className="mt-2 text-2xl font-bold text-lokka-primary md:text-3xl">
-                      {analyseSpecificData.bevegelse.nøkkeltall.travlesteDag}
-                    </p>
-                    <p className="mt-1 text-xs text-lokka-accent md:text-sm">
-                      {analyseSpecificData.bevegelse.nøkkeltall.lørdagAndel}% av ukesbesøk
-                    </p>
-                  </div>
-                </div>
+                {/* Tabbed Bevegelse */}
+                <TabbedSection
+                  defaultTab="ukedag"
+                  tabs={[
+                    {
+                      id: 'ukedag',
+                      label: 'Per ukedag',
+                      icon: <BarChart3 className="h-4 w-4" />,
+                      content: (
+                        <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
+                          <BesoksmønsterUkedag data={analyseSpecificData.bevegelse.perUkedag} />
+                        </div>
+                      )
+                    },
+                    ...(analyseSpecificData.bevegelse.perTime ? [{
+                      id: 'time',
+                      label: 'Per time',
+                      icon: <Clock className="h-4 w-4" />,
+                      content: (
+                        <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
+                          <BesokPerTimeChart data={analyseSpecificData.bevegelse.perTime} />
+                        </div>
+                      )
+                    }] : []),
+                    {
+                      id: 'stats',
+                      label: 'Nøkkeltall',
+                      icon: <BarChart3 className="h-4 w-4" />,
+                      content: (
+                        <div className="grid gap-4 md:grid-cols-2">
+                          <div className="rounded-xl border border-gray-200/50 bg-lokka-light/30 p-4 md:p-6">
+                            <p className="text-sm font-medium uppercase tracking-wider text-lokka-secondary">
+                              Besøk per km²
+                            </p>
+                            <p className="mt-2 text-2xl font-bold text-lokka-primary md:text-3xl">
+                              {analyseSpecificData.bevegelse.nøkkeltall.besøkPerKm2.toLocaleString()}
+                            </p>
+                            <p className="mt-1 text-xs text-lokka-accent md:text-sm">per dag</p>
+                          </div>
+                          <div className="rounded-xl border border-gray-200/50 bg-lokka-light/30 p-4 md:p-6">
+                            <p className="text-sm font-medium uppercase tracking-wider text-lokka-secondary">
+                              Travleste dag
+                            </p>
+                            <p className="mt-2 text-2xl font-bold text-lokka-primary md:text-3xl">
+                              {analyseSpecificData.bevegelse.nøkkeltall.travlesteDag}
+                            </p>
+                            <p className="mt-1 text-xs text-lokka-accent md:text-sm">
+                              {analyseSpecificData.bevegelse.nøkkeltall.lørdagAndel}% av ukesbesøk
+                            </p>
+                          </div>
+                        </div>
+                      )
+                    }
+                  ]}
+                />
               </Container>
             </section>
           )}
@@ -553,29 +568,32 @@ export default async function AnalysePage({ params }: PageProps) {
                   </QuickInsight>
                 </div>
 
-                {/* Geographic Areas */}
-                {analyseSpecificData.bevegelse.opprinnelseOmråder && (
-                  <div className="mb-8 md:mb-12">
-                    <h3 className="mb-4 text-lg font-semibold text-lokka-primary md:text-xl">
-                      Områder besøkende kommer fra
-                    </h3>
-                    <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
-                      <OpprinnelseChart data={analyseSpecificData.bevegelse.opprinnelseOmråder} limit={15} />
-                    </div>
-                  </div>
-                )}
-
-                {/* International Visitors */}
-                {analyseSpecificData.bevegelse.opprinnelseLand && (
-                  <div>
-                    <h3 className="mb-4 text-lg font-semibold text-lokka-primary md:text-xl">
-                      Topp 20 land (internasjonale besøkende)
-                    </h3>
-                    <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
-                      <LandChart data={analyseSpecificData.bevegelse.opprinnelseLand} limit={20} />
-                    </div>
-                  </div>
-                )}
+                {/* Tabbed Visitor Origin */}
+                <TabbedSection
+                  defaultTab="områder"
+                  tabs={[
+                    ...(analyseSpecificData.bevegelse.opprinnelseOmråder ? [{
+                      id: 'områder',
+                      label: 'Geografiske områder',
+                      icon: <Map className="h-4 w-4" />,
+                      content: (
+                        <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
+                          <OpprinnelseChart data={analyseSpecificData.bevegelse.opprinnelseOmråder} limit={15} />
+                        </div>
+                      )
+                    }] : []),
+                    ...(analyseSpecificData.bevegelse.opprinnelseLand ? [{
+                      id: 'land',
+                      label: 'Internasjonale besøkende',
+                      icon: <Globe className="h-4 w-4" />,
+                      content: (
+                        <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
+                          <LandChart data={analyseSpecificData.bevegelse.opprinnelseLand} limit={20} />
+                        </div>
+                      )
+                    }] : [])
+                  ]}
+                />
               </Container>
             </section>
           )}
