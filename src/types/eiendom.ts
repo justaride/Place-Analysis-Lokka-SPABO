@@ -14,8 +14,34 @@ export interface Eiendom {
     lng: number;
   };
   plaaceData: PlaaceData;
+  plaaceAnalyses?: PlaaceAnalyse[]; // Multiple analyses support
   tilleggsinfo: Tilleggsinfo;
   metadata: Metadata;
+}
+
+/**
+ * Individual Plaace analysis with specific parameters
+ */
+export interface PlaaceAnalyse {
+  id: string; // e.g., "5min-walk", "1min-walk", "custom-1"
+  tittel: string; // e.g., "5 minutters gange", "1 minutts gange"
+  beskrivelse?: string; // Optional description of this analysis
+  parametere: AnalyseParametere;
+  rapportDato: string; // ISO date string
+  screenshots: Screenshot[];
+  nokkeldata: Nokkeldata;
+  demografi?: DemografiData;
+  marked?: MarkedData;
+}
+
+/**
+ * Parameters used for this specific analysis
+ */
+export interface AnalyseParametere {
+  gangeavstand?: string; // e.g., "5 minutter", "1 minutt"
+  radius?: number; // meters
+  transporttype?: 'gange' | 'sykkel' | 'bil' | 'kollektiv';
+  notater?: string;
 }
 
 export interface PlaaceData {
