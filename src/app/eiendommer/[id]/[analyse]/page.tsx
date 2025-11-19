@@ -461,6 +461,125 @@ export default async function AnalysePage({ params }: PageProps) {
             </section>
           )}
 
+          {/* Bevegelse Section */}
+          {analyseSpecificData.bevegelse && (
+            <section className="border-t border-gray-200/30 bg-gray-50 py-12 md:py-16">
+              <Container>
+                <FadeIn>
+                  <h2 className="mb-6 text-2xl font-bold text-lokka-primary md:mb-8 md:text-3xl">
+                    🚶 Besøksmønster
+                  </h2>
+                  <p className="mb-6 text-sm text-lokka-secondary md:mb-8 md:text-base">
+                    Daglig gjennomsnitt: {analyseSpecificData.bevegelse.nøkkeltall.dagligBesøk.toLocaleString()} besøk/dag
+                  </p>
+                </FadeIn>
+
+                {/* Quick Insight */}
+                <div className="mb-8">
+                  <QuickInsight type="insight">
+                    <strong>{analyseSpecificData.bevegelse.nøkkeltall.travlesteDag}</strong> er travleste dag med
+                    <strong> {analyseSpecificData.bevegelse.nøkkeltall.lørdagAndel}% av ukens besøk</strong>. Området har
+                    <strong> {analyseSpecificData.bevegelse.nøkkeltall.besøkPerKm2.toLocaleString()} besøk/km²</strong> daglig.
+                  </QuickInsight>
+                </div>
+
+                {/* Per ukedag */}
+                <div className="mb-8 md:mb-12">
+                  <h3 className="mb-4 text-lg font-semibold text-lokka-primary md:text-xl">
+                    Besøk per ukedag
+                  </h3>
+                  <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
+                    <BesoksmønsterUkedag data={analyseSpecificData.bevegelse.perUkedag} />
+                  </div>
+                </div>
+
+                {/* Per time */}
+                {analyseSpecificData.bevegelse.perTime && (
+                  <div className="mb-8 md:mb-12">
+                    <h3 className="mb-4 text-lg font-semibold text-lokka-primary md:text-xl">
+                      Besøk per time
+                    </h3>
+                    <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
+                      <BesokPerTimeChart data={analyseSpecificData.bevegelse.perTime} />
+                    </div>
+                  </div>
+                )}
+
+                {/* Key Stats */}
+                <div className="mt-6 grid gap-4 md:mt-8 md:grid-cols-2">
+                  <div className="rounded-xl border border-gray-200/50 bg-lokka-light/30 p-4 md:p-6">
+                    <p className="text-sm font-medium uppercase tracking-wider text-lokka-secondary">
+                      Besøk per km²
+                    </p>
+                    <p className="mt-2 text-2xl font-bold text-lokka-primary md:text-3xl">
+                      {analyseSpecificData.bevegelse.nøkkeltall.besøkPerKm2.toLocaleString()}
+                    </p>
+                    <p className="mt-1 text-xs text-lokka-accent md:text-sm">per dag</p>
+                  </div>
+                  <div className="rounded-xl border border-gray-200/50 bg-lokka-light/30 p-4 md:p-6">
+                    <p className="text-sm font-medium uppercase tracking-wider text-lokka-secondary">
+                      Travleste dag
+                    </p>
+                    <p className="mt-2 text-2xl font-bold text-lokka-primary md:text-3xl">
+                      {analyseSpecificData.bevegelse.nøkkeltall.travlesteDag}
+                    </p>
+                    <p className="mt-1 text-xs text-lokka-accent md:text-sm">
+                      {analyseSpecificData.bevegelse.nøkkeltall.lørdagAndel}% av ukesbesøk
+                    </p>
+                  </div>
+                </div>
+              </Container>
+            </section>
+          )}
+
+          {/* Visitor Origin Section */}
+          {analyseSpecificData.bevegelse && (analyseSpecificData.bevegelse.opprinnelseOmråder || analyseSpecificData.bevegelse.opprinnelseLand) && (
+            <section className="border-t border-gray-200/30 bg-white py-12 md:py-16">
+              <Container>
+                <FadeIn>
+                  <h2 className="mb-6 text-2xl font-bold text-lokka-primary md:mb-8 md:text-3xl">
+                    🌍 Besøkende - Opprinnelse
+                  </h2>
+                  <p className="mb-6 text-sm text-lokka-secondary md:mb-8 md:text-base">
+                    Geografisk og internasjonal fordeling av besøkende til området
+                  </p>
+                </FadeIn>
+
+                {/* Quick Insight */}
+                <div className="mb-8">
+                  <QuickInsight type="info">
+                    <strong>Grünerløkka</strong> er det dominerende kildeområdet. Internasjonale besøkende utgjør en
+                    betydelig andel, med <strong>Danmark, Sverige og Tyskland</strong> som toppland.
+                  </QuickInsight>
+                </div>
+
+                {/* Geographic Areas */}
+                {analyseSpecificData.bevegelse.opprinnelseOmråder && (
+                  <div className="mb-8 md:mb-12">
+                    <h3 className="mb-4 text-lg font-semibold text-lokka-primary md:text-xl">
+                      Områder besøkende kommer fra
+                    </h3>
+                    <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
+                      <OpprinnelseChart data={analyseSpecificData.bevegelse.opprinnelseOmråder} limit={15} />
+                    </div>
+                  </div>
+                )}
+
+                {/* International Visitors */}
+                {analyseSpecificData.bevegelse.opprinnelseLand && (
+                  <div>
+                    <h3 className="mb-4 text-lg font-semibold text-lokka-primary md:text-xl">
+                      Topp 20 land (internasjonale besøkende)
+                    </h3>
+                    <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
+                      <LandChart data={analyseSpecificData.bevegelse.opprinnelseLand} limit={20} />
+                    </div>
+                  </div>
+                )}
+              </Container>
+            </section>
+          )}
+
           {/* Korthandel Section */}
           {analyseSpecificData.korthandel && (
             <section className="border-t border-gray-200/30 bg-gray-50 py-12 md:py-16">
@@ -532,128 +651,9 @@ export default async function AnalysePage({ params }: PageProps) {
             </section>
           )}
 
-          {/* Bevegelse Section */}
-          {analyseSpecificData.bevegelse && (
-            <section className="border-t border-gray-200/30 bg-white py-12 md:py-16">
-              <Container>
-                <FadeIn>
-                  <h2 className="mb-6 text-2xl font-bold text-lokka-primary md:mb-8 md:text-3xl">
-                    🚶 Besøksmønster
-                  </h2>
-                  <p className="mb-6 text-sm text-lokka-secondary md:mb-8 md:text-base">
-                    Daglig gjennomsnitt: {analyseSpecificData.bevegelse.nøkkeltall.dagligBesøk.toLocaleString()} besøk/dag
-                  </p>
-                </FadeIn>
-
-                {/* Quick Insight */}
-                <div className="mb-8">
-                  <QuickInsight type="insight">
-                    <strong>{analyseSpecificData.bevegelse.nøkkeltall.travlesteDag}</strong> er travleste dag med
-                    <strong> {analyseSpecificData.bevegelse.nøkkeltall.lørdagAndel}% av ukens besøk</strong>. Området har
-                    <strong> {analyseSpecificData.bevegelse.nøkkeltall.besøkPerKm2.toLocaleString()} besøk/km²</strong> daglig.
-                  </QuickInsight>
-                </div>
-
-                {/* Per ukedag */}
-                <div className="mb-8 md:mb-12">
-                  <h3 className="mb-4 text-lg font-semibold text-lokka-primary md:text-xl">
-                    Besøk per ukedag
-                  </h3>
-                  <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
-                    <BesoksmønsterUkedag data={analyseSpecificData.bevegelse.perUkedag} />
-                  </div>
-                </div>
-
-                {/* Per time */}
-                {analyseSpecificData.bevegelse.perTime && (
-                  <div className="mb-8 md:mb-12">
-                    <h3 className="mb-4 text-lg font-semibold text-lokka-primary md:text-xl">
-                      Besøk per time
-                    </h3>
-                    <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
-                      <BesokPerTimeChart data={analyseSpecificData.bevegelse.perTime} />
-                    </div>
-                  </div>
-                )}
-
-                {/* Key Stats */}
-                <div className="mt-6 grid gap-4 md:mt-8 md:grid-cols-2">
-                  <div className="rounded-xl border border-gray-200/50 bg-lokka-light/30 p-4 md:p-6">
-                    <p className="text-sm font-medium uppercase tracking-wider text-lokka-secondary">
-                      Besøk per km²
-                    </p>
-                    <p className="mt-2 text-2xl font-bold text-lokka-primary md:text-3xl">
-                      {analyseSpecificData.bevegelse.nøkkeltall.besøkPerKm2.toLocaleString()}
-                    </p>
-                    <p className="mt-1 text-xs text-lokka-accent md:text-sm">per dag</p>
-                  </div>
-                  <div className="rounded-xl border border-gray-200/50 bg-lokka-light/30 p-4 md:p-6">
-                    <p className="text-sm font-medium uppercase tracking-wider text-lokka-secondary">
-                      Travleste dag
-                    </p>
-                    <p className="mt-2 text-2xl font-bold text-lokka-primary md:text-3xl">
-                      {analyseSpecificData.bevegelse.nøkkeltall.travlesteDag}
-                    </p>
-                    <p className="mt-1 text-xs text-lokka-accent md:text-sm">
-                      {analyseSpecificData.bevegelse.nøkkeltall.lørdagAndel}% av ukesbesøk
-                    </p>
-                  </div>
-                </div>
-              </Container>
-            </section>
-          )}
-
-          {/* Visitor Origin Section */}
-          {analyseSpecificData.bevegelse && (analyseSpecificData.bevegelse.opprinnelseOmråder || analyseSpecificData.bevegelse.opprinnelseLand) && (
-            <section className="border-t border-gray-200/30 bg-gray-50 py-12 md:py-16">
-              <Container>
-                <FadeIn>
-                  <h2 className="mb-6 text-2xl font-bold text-lokka-primary md:mb-8 md:text-3xl">
-                    🌍 Besøkende - Opprinnelse
-                  </h2>
-                  <p className="mb-6 text-sm text-lokka-secondary md:mb-8 md:text-base">
-                    Geografisk og internasjonal fordeling av besøkende til området
-                  </p>
-                </FadeIn>
-
-                {/* Quick Insight */}
-                <div className="mb-8">
-                  <QuickInsight type="info">
-                    <strong>Grünerløkka</strong> er det dominerende kildeområdet. Internasjonale besøkende utgjør en
-                    betydelig andel, med <strong>Danmark, Sverige og Tyskland</strong> som toppland.
-                  </QuickInsight>
-                </div>
-
-                {/* Geographic Areas */}
-                {analyseSpecificData.bevegelse.opprinnelseOmråder && (
-                  <div className="mb-8 md:mb-12">
-                    <h3 className="mb-4 text-lg font-semibold text-lokka-primary md:text-xl">
-                      Områder besøkende kommer fra
-                    </h3>
-                    <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
-                      <OpprinnelseChart data={analyseSpecificData.bevegelse.opprinnelseOmråder} limit={15} />
-                    </div>
-                  </div>
-                )}
-
-                {/* International Visitors */}
-                {analyseSpecificData.bevegelse.opprinnelseLand && (
-                  <div>
-                    <h3 className="mb-4 text-lg font-semibold text-lokka-primary md:text-xl">
-                      Topp 20 land (internasjonale besøkende)
-                    </h3>
-                    <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
-                      <LandChart data={analyseSpecificData.bevegelse.opprinnelseLand} limit={20} />
-                    </div>
-                  </div>
-                )}
-              </Container>
-            </section>
-          )}
-
           {/* Konkurransebilde Section */}
           {analyseSpecificData.konkurransebilde && (
-            <section className="border-t border-gray-200/30 bg-white py-12 md:py-16">
+            <section className="border-t border-gray-200/30 bg-gray-50 py-12 md:py-16">
               <Container>
                 <FadeIn>
                   <h2 className="mb-6 text-2xl font-bold text-lokka-primary md:mb-8 md:text-3xl">
