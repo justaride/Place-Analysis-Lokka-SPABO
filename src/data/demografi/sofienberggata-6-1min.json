@@ -1,0 +1,184 @@
+{
+  "aldersfordeling": {
+    "mann": [
+      {
+        "category": "0-5",
+        "value": 18
+      },
+      {
+        "category": "6-12",
+        "value": 14
+      },
+      {
+        "category": "13-15",
+        "value": 6
+      },
+      {
+        "category": "16-18",
+        "value": 6
+      },
+      {
+        "category": "19-23",
+        "value": 28
+      },
+      {
+        "category": "23-34",
+        "value": 103
+      },
+      {
+        "category": "35-44",
+        "value": 58
+      },
+      {
+        "category": "45-54",
+        "value": 40
+      },
+      {
+        "category": "55-64",
+        "value": 24
+      },
+      {
+        "category": "65-74",
+        "value": 13
+      },
+      {
+        "category": "75-84",
+        "value": 8
+      },
+      {
+        "category": "85+",
+        "value": 1
+      }
+    ],
+    "kvinne": [
+      {
+        "category": "0-5",
+        "value": 16
+      },
+      {
+        "category": "6-12",
+        "value": 12
+      },
+      {
+        "category": "13-15",
+        "value": 6
+      },
+      {
+        "category": "16-18",
+        "value": 8
+      },
+      {
+        "category": "19-23",
+        "value": 30
+      },
+      {
+        "category": "23-34",
+        "value": 114
+      },
+      {
+        "category": "35-44",
+        "value": 48
+      },
+      {
+        "category": "45-54",
+        "value": 34
+      },
+      {
+        "category": "55-64",
+        "value": 21
+      },
+      {
+        "category": "65-74",
+        "value": 14
+      },
+      {
+        "category": "75-84",
+        "value": 6
+      },
+      {
+        "category": "85+",
+        "value": 1
+      }
+    ]
+  },
+  "inntektsfordeling": [
+    {
+      "category": "0 NOK",
+      "value": 78.16
+    },
+    {
+      "category": "0 NOK - NOK 100k",
+      "value": 80.06
+    },
+    {
+      "category": "NOK 100k - NOK 200k",
+      "value": 64.28
+    },
+    {
+      "category": "NOK 200k - NOK 300k",
+      "value": 59.99
+    },
+    {
+      "category": "NOK 300k - NOK 400k",
+      "value": 58.12
+    },
+    {
+      "category": "NOK 400k - NOK 500k",
+      "value": 57.64
+    },
+    {
+      "category": "NOK 500k - NOK 600k",
+      "value": 48.31
+    },
+    {
+      "category": "NOK 600k - NOK 700k",
+      "value": 29.85
+    },
+    {
+      "category": "NOK 700k - NOK 800k",
+      "value": 19.92
+    },
+    {
+      "category": "NOK 800k - NOK 1 mill.",
+      "value": 39.61
+    },
+    {
+      "category": "NOK 1 mill. - NOK 1,5 mill.",
+      "value": 5.22
+    },
+    {
+      "category": "NOK 1,5 mill.+",
+      "value": 3.46
+    }
+  ],
+  "husholdninger": [
+    {
+      "type": "Par uten hjemmeboende barn",
+      "value": 74
+    },
+    {
+      "type": "Par med barn",
+      "value": 34
+    },
+    {
+      "type": "Aleneboende",
+      "value": 206
+    },
+    {
+      "type": "Enslig forelder med barn",
+      "value": 16
+    },
+    {
+      "type": "Andre husholdninger",
+      "value": 6
+    }
+  ],
+  "nøkkeltall": {
+    "befolkning": 629,
+    "befolkningstetthet": 25500,
+    "områdestørrelse": 0.025,
+    "vekst": 3,
+    "totalMann": 319,
+    "totalKvinne": 310
+  }
+}

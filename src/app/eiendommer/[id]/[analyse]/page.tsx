@@ -13,6 +13,12 @@ import { formaterDato } from '@/lib/utils';
 import { readFile } from 'fs/promises';
 import { join } from 'path';
 
+// Analytics components for 1min-gange
+import AldersfordelingPyramid from '@/components/analytics/AldersfordelingPyramid';
+import InntektsfordelingChart from '@/components/analytics/InntektsfordelingChart';
+import KorthandelTidsserie from '@/components/analytics/KorthandelTidsserie';
+import BesoksmønsterUkedag from '@/components/analytics/BesoksmønsterUkedag';
+
 interface PageProps {
   params: Promise<{
     id: string;
@@ -65,11 +71,13 @@ export default async function AnalysePage({ params }: PageProps) {
   }
 
   // Load aktør data if available for this property
+  // For 1min-gange, use separate aktør file
   let aktorData = null;
   let totalRevenue = 0;
   let topCategory = '';
   try {
-    const aktorPath = join(process.cwd(), 'src', 'data', 'aktorer', `${id}.json`);
+    const aktorFilename = analyse === '1min-gange' ? `${id}-1min.json` : `${id}.json`;
+    const aktorPath = join(process.cwd(), 'src', 'data', 'aktorer', aktorFilename);
     const aktorJson = await readFile(aktorPath, 'utf-8');
     aktorData = JSON.parse(aktorJson);
 
@@ -88,6 +96,35 @@ export default async function AnalysePage({ params }: PageProps) {
     }
   } catch (error) {
     // Aktør data is optional - no error if file doesn't exist
+  }
+
+  // Load specific analysis data for 1min-gange
+  let analyseSpecificData = null;
+  if (analyse === '1min-gange') {
+    try {
+      // Load demografi data
+      const demografiPath = join(process.cwd(), 'src', 'data', 'demografi', `${id}-1min.json`);
+      const demografiJson = await readFile(demografiPath, 'utf-8');
+      const demografiData = JSON.parse(demografiJson);
+
+      // Load korthandel data
+      const korthandelPath = join(process.cwd(), 'src', 'data', 'marked', `${id}-1min-korthandel.json`);
+      const korthandelJson = await readFile(korthandelPath, 'utf-8');
+      const korthandelData = JSON.parse(korthandelJson);
+
+      // Load bevegelse data
+      const bevegelsePath = join(process.cwd(), 'src', 'data', 'bevegelse', `${id}-1min.json`);
+      const bevegelseJson = await readFile(bevegelsePath, 'utf-8');
+      const bevegelseData = JSON.parse(bevegelseJson);
+
+      analyseSpecificData = {
+        demografi: demografiData,
+        korthandel: korthandelData,
+        bevegelse: bevegelseData
+      };
+    } catch (error) {
+      console.log('Analysis-specific data not found:', error);
+    }
   }
 
   // Find the specific analysis or create from legacy data
@@ -317,6 +354,142 @@ export default async function AnalysePage({ params }: PageProps) {
           categoryStats={aktorData.categoryStats}
           metadata={aktorData.metadata}
         />
+      )}
+
+      {/* 1min-gange Specific Sections */}
+      {analyse === '1min-gange' && analyseSpecificData && (
+        <>
+          {/* Demografi Section */}
+          {analyseSpecificData.demografi && (
+            <section className="border-t border-gray-200/30 bg-white py-12 md:py-16">
+              <Container>
+                <FadeIn>
+                  <h2 className="mb-6 text-2xl font-bold text-lokka-primary md:mb-8 md:text-3xl">
+                    📊 Demografi
+                  </h2>
+                  <p className="mb-6 text-sm text-lokka-secondary md:mb-8 md:text-base">
+                    Befolkningssammensetning innen 1 minutts gange ({analyseSpecificData.demografi.nøkkeltall.befolkning} innbyggere)
+                  </p>
+                </FadeIn>
+
+                {/* Aldersfordeling */}
+                <div className="mb-8 md:mb-12">
+                  <h3 className="mb-4 text-lg font-semibold text-lokka-primary md:text-xl">
+                    Aldersfordeling
+                  </h3>
+                  <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
+                    <AldersfordelingPyramid data={analyseSpecificData.demografi.aldersfordeling} />
+                  </div>
+                </div>
+
+                {/* Inntektsfordeling */}
+                <div>
+                  <h3 className="mb-4 text-lg font-semibold text-lokka-primary md:text-xl">
+                    Inntektsfordeling
+                  </h3>
+                  <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
+                    <InntektsfordelingChart data={analyseSpecificData.demografi.inntektsfordeling} />
+                  </div>
+                </div>
+              </Container>
+            </section>
+          )}
+
+          {/* Korthandel Section */}
+          {analyseSpecificData.korthandel && (
+            <section className="border-t border-gray-200/30 bg-gray-50 py-12 md:py-16">
+              <Container>
+                <FadeIn>
+                  <h2 className="mb-6 text-2xl font-bold text-lokka-primary md:mb-8 md:text-3xl">
+                    💳 Korthandel 2019-2025
+                  </h2>
+                  <p className="mb-6 text-sm text-lokka-secondary md:mb-8 md:text-base">
+                    Utvikling i korthandel over tid. Daglig omsetning: NOK {analyseSpecificData.korthandel.nøkkeltall.dagligOmsetning}M
+                  </p>
+                </FadeIn>
+
+                <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
+                  <KorthandelTidsserie data={analyseSpecificData.korthandel.tidsserie} />
+                </div>
+
+                {/* Key Stats */}
+                <div className="mt-6 grid gap-4 md:mt-8 md:grid-cols-3">
+                  <div className="rounded-xl border border-gray-200/50 bg-white p-4 text-center md:p-6">
+                    <p className="text-sm font-medium uppercase tracking-wider text-lokka-secondary">
+                      Total omsetning
+                    </p>
+                    <p className="mt-2 text-2xl font-bold text-lokka-primary md:text-3xl">
+                      NOK {analyseSpecificData.korthandel.nøkkeltall.totalOmsetning}M
+                    </p>
+                    <p className="mt-1 text-xs text-lokka-accent md:text-sm">2019-2025</p>
+                  </div>
+                  <div className="rounded-xl border border-gray-200/50 bg-white p-4 text-center md:p-6">
+                    <p className="text-sm font-medium uppercase tracking-wider text-lokka-secondary">
+                      Gj.snitt transaksjon
+                    </p>
+                    <p className="mt-2 text-2xl font-bold text-lokka-primary md:text-3xl">
+                      NOK {analyseSpecificData.korthandel.nøkkeltall.gjennomsnittTransaksjon}
+                    </p>
+                    <p className="mt-1 text-xs text-lokka-accent md:text-sm">per kjøp</p>
+                  </div>
+                  <div className="rounded-xl border border-gray-200/50 bg-white p-4 text-center md:p-6">
+                    <p className="text-sm font-medium uppercase tracking-wider text-lokka-secondary">
+                      Trend (30 dager)
+                    </p>
+                    <p className={`mt-2 text-2xl font-bold md:text-3xl ${analyseSpecificData.korthandel.nøkkeltall.trend < 0 ? 'text-red-600' : 'text-green-600'}`}>
+                      {analyseSpecificData.korthandel.nøkkeltall.trend > 0 ? '+' : ''}{analyseSpecificData.korthandel.nøkkeltall.trend}%
+                    </p>
+                    <p className="mt-1 text-xs text-lokka-accent md:text-sm">siste måned</p>
+                  </div>
+                </div>
+              </Container>
+            </section>
+          )}
+
+          {/* Bevegelse Section */}
+          {analyseSpecificData.bevegelse && (
+            <section className="border-t border-gray-200/30 bg-white py-12 md:py-16">
+              <Container>
+                <FadeIn>
+                  <h2 className="mb-6 text-2xl font-bold text-lokka-primary md:mb-8 md:text-3xl">
+                    🚶 Besøksmønster
+                  </h2>
+                  <p className="mb-6 text-sm text-lokka-secondary md:mb-8 md:text-base">
+                    Daglig gjennomsnitt: {analyseSpecificData.bevegelse.nøkkeltall.dagligBesøk.toLocaleString()} besøk/dag
+                  </p>
+                </FadeIn>
+
+                <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
+                  <BesoksmønsterUkedag data={analyseSpecificData.bevegelse.perUkedag} />
+                </div>
+
+                {/* Key Stats */}
+                <div className="mt-6 grid gap-4 md:mt-8 md:grid-cols-2">
+                  <div className="rounded-xl border border-gray-200/50 bg-lokka-light/30 p-4 md:p-6">
+                    <p className="text-sm font-medium uppercase tracking-wider text-lokka-secondary">
+                      Besøk per km²
+                    </p>
+                    <p className="mt-2 text-2xl font-bold text-lokka-primary md:text-3xl">
+                      {analyseSpecificData.bevegelse.nøkkeltall.besøkPerKm2.toLocaleString()}
+                    </p>
+                    <p className="mt-1 text-xs text-lokka-accent md:text-sm">per dag</p>
+                  </div>
+                  <div className="rounded-xl border border-gray-200/50 bg-lokka-light/30 p-4 md:p-6">
+                    <p className="text-sm font-medium uppercase tracking-wider text-lokka-secondary">
+                      Travleste dag
+                    </p>
+                    <p className="mt-2 text-2xl font-bold text-lokka-primary md:text-3xl">
+                      {analyseSpecificData.bevegelse.nøkkeltall.travlesteDag}
+                    </p>
+                    <p className="mt-1 text-xs text-lokka-accent md:text-sm">
+                      {analyseSpecificData.bevegelse.nøkkeltall.lørdagAndel}% av ukesbesøk
+                    </p>
+                  </div>
+                </div>
+              </Container>
+            </section>
+          )}
+        </>
       )}
     </>
   );

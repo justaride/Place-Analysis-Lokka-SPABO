@@ -133,16 +133,52 @@
     {
       "id": "1min-gange",
       "tittel": "1 minutt gange",
-      "beskrivelse": "Plaace-analyse basert på 1 minutts gangeavstand fra eiendommen",
+      "beskrivelse": "Plaace-analyse basert på 1 minutts gangeavstand fra eiendommen. Dette er et svært kompakt område på kun 0.025 km² med høy tetthet og aktivitet direkte ved Olaf Ryes plass.",
       "parametere": {
         "gangeavstand": "1 minutt",
-        "transporttype": "gange"
+        "transporttype": "gange",
+        "notater": "Radius ~80 meter, 0.025 km²"
       },
       "rapportDato": "2024-11-19T00:00:00Z",
-      "screenshots": [],
-      "nokkeldata": {},
-      "demografi": {},
-      "marked": {}
+      "screenshots": [
+        {
+          "filnavn": "1-minutts område",
+          "path": "/images/sofienberggata-6/1min-kart.png",
+          "beskrivelse": "Kartutsnitt som viser 1-minutts gangeavstand fra Sofienberggata 6",
+          "kategori": "oversikt"
+        }
+      ],
+      "nokkeldata": {
+        "befolkning": 629,
+        "områdestørrelse": "0.025 km²",
+        "befolkningstetthet": "25,500 innb/km²",
+        "dagligOmsetning": "NOK 1.7M",
+        "totalOmsetning": "NOK 4.2 mrd (2019-2025)",
+        "dagligeBesøk": "3,473 besøk/dag",
+        "travlesteDag": "Lørdag (18%)",
+        "konseptTetthet": "770 konsepter/km²",
+        "totalNæringsaktører": 19
+      },
+      "demografi": {
+        "totalBefolkning": 629,
+        "befolkningsutvikling": 3,
+        "aldersfordeling": {
+          "0-17": 56,
+          "18-29": 58,
+          "30-49": 217,
+          "50-66": 106,
+          "67+": 42
+        },
+        "husstandsstorrelse": 1.9
+      },
+      "marked": {
+        "omsetning": 189,
+        "omsetningVekst": -4,
+        "antallVirksomheter": 19,
+        "konseptTetthet": 770,
+        "omsetningTetthet": 7600,
+        "kvadratmeterpris": 0
+      }
     }
   ],
   "tilleggsinfo": {

@@ -1,0 +1,110 @@
+{
+  "konseptmiks": [
+    {
+      "kategori1": "Mat og opplevelser",
+      "kategori2": "Restaurant",
+      "antall": 3
+    },
+    {
+      "kategori1": "Handel",
+      "kategori2": "Klesbutikker",
+      "antall": 3
+    },
+    {
+      "kategori1": "Handel",
+      "kategori2": "Mat og drikke",
+      "antall": 2
+    },
+    {
+      "kategori1": "Handel",
+      "kategori2": "Annen handel",
+      "antall": 3
+    },
+    {
+      "kategori1": "Handel",
+      "kategori2": "Hjem og interiør",
+      "antall": 2
+    },
+    {
+      "kategori1": "Tjenester",
+      "kategori2": "Skjønnhet og velvære",
+      "antall": 3
+    },
+    {
+      "kategori1": "Tjenester",
+      "kategori2": "Profesjoner",
+      "antall": 4
+    },
+    {
+      "kategori1": "Tjenester",
+      "kategori2": "Treningssentre",
+      "antall": 1
+    }
+  ],
+  "kjederVsUavhengige": [
+    {
+      "year": "2015",
+      "uavhengig": 15.98,
+      "kjeder": 84.02
+    },
+    {
+      "year": "2016",
+      "uavhengig": 17.0,
+      "kjeder": 83.0
+    },
+    {
+      "year": "2017",
+      "uavhengig": 33.33,
+      "kjeder": 66.67
+    },
+    {
+      "year": "2018",
+      "uavhengig": 29.81,
+      "kjeder": 70.19
+    },
+    {
+      "year": "2019",
+      "uavhengig": 35.52,
+      "kjeder": 64.48
+    },
+    {
+      "year": "2020",
+      "uavhengig": 34.85,
+      "kjeder": 65.15
+    },
+    {
+      "year": "2021",
+      "uavhengig": 29.7,
+      "kjeder": 70.3
+    },
+    {
+      "year": "2022",
+      "uavhengig": 36.2,
+      "kjeder": 63.8
+    },
+    {
+      "year": "2023",
+      "uavhengig": 39.59,
+      "kjeder": 60.41
+    },
+    {
+      "year": "2024",
+      "uavhengig": 44.26,
+      "kjeder": 55.74
+    },
+    {
+      "year": "2025",
+      "uavhengig": 37.49,
+      "kjeder": 62.51
+    }
+  ],
+  "nøkkeltall": {
+    "konseptTetthet": 770,
+    "totalOmsetning": 189,
+    "omsetningTetthet": 7600,
+    "trend": {
+      "konseptTetthet": -10,
+      "omsetning": -4
+    }
+  }
+}

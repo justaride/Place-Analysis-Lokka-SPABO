@@ -1,0 +1,320 @@
+{
+  "actors": [
+    {
+      "rank": "#1",
+      "navn": "Kiwi Minipris Markveien",
+      "type": "Handel / Mat og drikke",
+      "adresse": "MARKVEIEN 35 B",
+      "kommune": "Oslo",
+      "omsetning": 69.0,
+      "kjedeProsent": "0.1%",
+      "yoyVekst": 7.0,
+      "ansatteLokalt": 18.0,
+      "ansatteKjede": 14363,
+      "kjedeLokasjoner": 728,
+      "markedsandel": 36.74
+    },
+    {
+      "rank": "#2",
+      "navn": "Fitness 24 Seven Markveien Senter",
+      "type": "Tjenester / Treningssentre",
+      "adresse": "ØSTRE AKER VEI 17",
+      "kommune": "Oslo",
+      "omsetning": 36.0,
+      "kjedeProsent": null,
+      "yoyVekst": 12.0,
+      "ansatteLokalt": 12.0,
+      "ansatteKjede": 11,
+      "kjedeLokasjoner": 1,
+      "markedsandel": 19.13
+    },
+    {
+      "rank": "#3",
+      "navn": "Boots Apotek Grünerløkka",
+      "type": "Handel / Annen handel",
+      "adresse": "SOFIENBERGGATA 6",
+      "kommune": "Oslo",
+      "omsetning": 20.0,
+      "kjedeProsent": "0.4%",
+      "yoyVekst": -10.0,
+      "ansatteLokalt": 8.0,
+      "ansatteKjede": 1534,
+      "kjedeLokasjoner": 156,
+      "markedsandel": 10.57
+    },
+    {
+      "rank": "#4",
+      "navn": "Illegal Burger Ryes Plass AS",
+      "type": "Mat og opplevelser / Restaurant",
+      "adresse": "OLAF RYES PLASS 4 A",
+      "kommune": "Oslo",
+      "omsetning": 9.0,
+      "kjedeProsent": null,
+      "yoyVekst": 0.0,
+      "ansatteLokalt": 70.0,
+      "ansatteKjede": 55,
+      "kjedeLokasjoner": 1,
+      "markedsandel": 4.9
+    },
+    {
+      "rank": "#5",
+      "navn": "Frank Walton AS",
+      "type": "Tjenester / Profesjoner",
+      "adresse": "OLAF RYES PLASS 5 A",
+      "kommune": "Oslo",
+      "omsetning": 8.0,
+      "kjedeProsent": null,
+      "yoyVekst": 7.0,
+      "ansatteLokalt": 10.0,
+      "ansatteKjede": 10,
+      "kjedeLokasjoner": 1,
+      "markedsandel": 4.19
+    },
+    {
+      "rank": "#6",
+      "navn": "På Håret Grunerløkka",
+      "type": "Tjenester / Skjønnhet og velvære",
+      "adresse": "OLAF RYES PLASS 6",
+      "kommune": "Oslo",
+      "omsetning": 6.0,
+      "kjedeProsent": "5%",
+      "yoyVekst": 31.0,
+      "ansatteLokalt": 9.0,
+      "ansatteKjede": 171,
+      "kjedeLokasjoner": 20,
+      "markedsandel": 3.15
+    },
+    {
+      "rank": "#7",
+      "navn": "Fretex Miljø Butikk Grunerløkka Oslo",
+      "type": "Handel / Klesbutikker",
+      "adresse": "OLAF RYES PLASS 3",
+      "kommune": "Oslo",
+      "omsetning": 6.0,
+      "kjedeProsent": "4%",
+      "yoyVekst": -19.0,
+      "ansatteLokalt": 11.0,
+      "ansatteKjede": 461,
+      "kjedeLokasjoner": 34,
+      "markedsandel": 3.41
+    },
+    {
+      "rank": "#8",
+      "navn": "Roma Pizzeria Oslo",
+      "type": "Mat og opplevelser / Restaurant",
+      "adresse": "SOFIENBERGGATA 6",
+      "kommune": "Oslo",
+      "omsetning": 5.0,
+      "kjedeProsent": null,
+      "yoyVekst": 5.0,
+      "ansatteLokalt": 5.0,
+      "ansatteKjede": 7,
+      "kjedeLokasjoner": 1,
+      "markedsandel": 2.64
+    },
+    {
+      "rank": "#9",
+      "navn": "Olivenlunden 1830 Grünerløkka",
+      "type": "Handel / Mat og drikke",
+      "adresse": "OLAF RYES PLASS 6",
+      "kommune": "Oslo",
+      "omsetning": 4.0,
+      "kjedeProsent": "7%",
+      "yoyVekst": 24.0,
+      "ansatteLokalt": 6.0,
+      "ansatteKjede": 119,
+      "kjedeLokasjoner": 15,
+      "markedsandel": 1.87
+    },
+    {
+      "rank": "#10",
+      "navn": "Hvice AS",
+      "type": "Mat og opplevelser / Restaurant",
+      "adresse": "OLAF RYES PLASS 3 A",
+      "kommune": "Oslo",
+      "omsetning": 4.0,
+      "kjedeProsent": null,
+      "yoyVekst": 22.0,
+      "ansatteLokalt": 5.0,
+      "ansatteKjede": 4,
+      "kjedeLokasjoner": 1,
+      "markedsandel": 2.01
+    },
+    {
+      "rank": "#11",
+      "navn": "Blomsterista AS",
+      "type": "Handel / Hjem og interiør",
+      "adresse": "OLAF RYES PLASS 7",
+      "kommune": "Oslo",
+      "omsetning": 4.0,
+      "kjedeProsent": null,
+      "yoyVekst": 64.0,
+      "ansatteLokalt": 2.0,
+      "ansatteKjede": 1,
+      "kjedeLokasjoner": 1,
+      "markedsandel": 2.2
+    },
+    {
+      "rank": "#12",
+      "navn": "Fontanas Kjøkken Markveien Senter",
+      "type": "Handel / Hjem og interiør",
+      "adresse": "MARKVEIEN 35 A",
+      "kommune": "Oslo",
+      "omsetning": 3.0,
+      "kjedeProsent": null,
+      "yoyVekst": -25.0,
+      "ansatteLokalt": 4.0,
+      "ansatteKjede": 4,
+      "kjedeLokasjoner": 1,
+      "markedsandel": 1.49
+    },
+    {
+      "rank": "#13",
+      "navn": "Tint",
+      "type": "Handel / Klesbutikker",
+      "adresse": "SOFIENBERGGATA 6",
+      "kommune": "Oslo",
+      "omsetning": 3.0,
+      "kjedeProsent": null,
+      "yoyVekst": -5.0,
+      "ansatteLokalt": 3.0,
+      "ansatteKjede": 3,
+      "kjedeLokasjoner": 1,
+      "markedsandel": 1.73
+    },
+    {
+      "rank": "#14",
+      "navn": "Balanzera Organic Hairdressing",
+      "type": "Tjenester / Skjønnhet og velvære",
+      "adresse": "SOFIENBERGGATA 2 B",
+      "kommune": "Oslo",
+      "omsetning": 3.0,
+      "kjedeProsent": null,
+      "yoyVekst": -5.0,
+      "ansatteLokalt": 7.0,
+      "ansatteKjede": 7,
+      "kjedeLokasjoner": 1,
+      "markedsandel": 1.78
+    },
+    {
+      "rank": "#15",
+      "navn": "M35 Collective AS",
+      "type": "Handel / Annen handel",
+      "adresse": "MARKVEIEN 35 A",
+      "kommune": "Oslo",
+      "omsetning": 3.0,
+      "kjedeProsent": null,
+      "yoyVekst": -25.0,
+      "ansatteLokalt": 3.0,
+      "ansatteKjede": 3,
+      "kjedeLokasjoner": 1,
+      "markedsandel": 1.85
+    },
+    {
+      "rank": "#16",
+      "navn": "Faryabi Skinnverksted AS",
+      "type": "Tjenester / Profesjoner",
+      "adresse": "OLAF RYES PLASS 6",
+      "kommune": "Oslo",
+      "omsetning": 2.0,
+      "kjedeProsent": null,
+      "yoyVekst": 28.0,
+      "ansatteLokalt": 2.0,
+      "ansatteKjede": 1,
+      "kjedeLokasjoner": 1,
+      "markedsandel": 0.83
+    },
+    {
+      "rank": "#17",
+      "navn": "Door N6",
+      "type": "Tjenester / Skjønnhet og velvære",
+      "adresse": "OLAF RYES PLASS 6",
+      "kommune": "Oslo",
+      "omsetning": 1.0,
+      "kjedeProsent": null,
+      "yoyVekst": 93.0,
+      "ansatteLokalt": 1.0,
+      "ansatteKjede": 1,
+      "kjedeLokasjoner": 1,
+      "markedsandel": 0.68
+    },
+    {
+      "rank": "#18",
+      "navn": "Holzweiler Collage",
+      "type": "Handel / Klesbutikker",
+      "adresse": "GRÜNERS GATE 9 A",
+      "kommune": "Oslo",
+      "omsetning": 1.0,
+      "kjedeProsent": null,
+      "yoyVekst": 70.0,
+      "ansatteLokalt": 0.0,
+      "ansatteKjede": 0,
+      "kjedeLokasjoner": 1,
+      "markedsandel": 0.69
+    },
+    {
+      "rank": "#19",
+      "navn": "Frank Walton",
+      "type": "Tjenester / Profesjoner",
+      "adresse": "OLAF RYES PLASS 5 A",
+      "kommune": "Oslo",
+      "omsetning": 250.0,
+      "kjedeProsent": null,
+      "yoyVekst": -35.0,
+      "ansatteLokalt": 0.0,
+      "ansatteKjede": 1,
+      "kjedeLokasjoner": 1,
+      "markedsandel": 0.13
+    }
+  ],
+  "categoryStats": {
+    "Handel / Mat og drikke": {
+      "count": 2,
+      "totalRevenue": 73.0,
+      "avgRevenue": 36.5
+    },
+    "Tjenester / Treningssentre": {
+      "count": 1,
+      "totalRevenue": 36.0,
+      "avgRevenue": 36.0
+    },
+    "Handel / Annen handel": {
+      "count": 2,
+      "totalRevenue": 23.0,
+      "avgRevenue": 11.5
+    },
+    "Mat og opplevelser / Restaurant": {
+      "count": 3,
+      "totalRevenue": 18.0,
+      "avgRevenue": 6.0
+    },
+    "Tjenester / Profesjoner": {
+      "count": 3,
+      "totalRevenue": 260.0,
+      "avgRevenue": 86.67
+    },
+    "Tjenester / Skjønnhet og velvære": {
+      "count": 3,
+      "totalRevenue": 10.0,
+      "avgRevenue": 3.33
+    },
+    "Handel / Klesbutikker": {
+      "count": 3,
+      "totalRevenue": 10.0,
+      "avgRevenue": 3.33
+    },
+    "Handel / Hjem og interiør": {
+      "count": 2,
+      "totalRevenue": 7.0,
+      "avgRevenue": 3.5
+    }
+  },
+  "metadata": {
+    "totalActors": 19,
+    "totalCategories": 8,
+    "totalRevenue": 437.0,
+    "generatedAt": "2024-11-19",
+    "analysisType": "1min-gange",
+    "areaSize": "0.025 km²"
+  }
+}
