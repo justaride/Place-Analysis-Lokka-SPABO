@@ -180,5 +180,27 @@
     "vekst": 3,
     "totalMann": 319,
     "totalKvinne": 310
-  }
+  },
+  "medianInntektPerHusholdstype": [
+    {
+      "type": "Alle husholdninger",
+      "median": 479000.0
+    },
+    {
+      "type": "Par uten hjemmeboende barn",
+      "median": 826000.0
+    },
+    {
+      "type": "Par med barn",
+      "median": 1015000.0
+    },
+    {
+      "type": "Aleneboende",
+      "median": 383000.0
+    },
+    {
+      "type": "Enslig forelder med barn",
+      "median": 457000.0
+    }
+  ]
 }

@@ -215,5 +215,289 @@
     "travlesteDag": "Lørdag",
     "lørdagAndel": 18,
     "periode": "01.01.2023 - 30.09.2025"
-  }
+  },
+  "opprinnelseOmråder": [
+    {
+      "område": "Grünerløkka",
+      "prosent": 30.03
+    },
+    {
+      "område": "Gamle Aker",
+      "prosent": 7.67
+    },
+    {
+      "område": "Sentrum 2",
+      "prosent": 7.65
+    },
+    {
+      "område": "Rodeløkka",
+      "prosent": 5.88
+    },
+    {
+      "område": "Torshov",
+      "prosent": 3.85
+    },
+    {
+      "område": "Tøyen",
+      "prosent": 2.77
+    },
+    {
+      "område": "Ila",
+      "prosent": 2.16
+    },
+    {
+      "område": "Grønland",
+      "prosent": 2.13
+    },
+    {
+      "område": "Grefsenlia",
+      "prosent": 2.03
+    },
+    {
+      "område": "Hasle",
+      "prosent": 1.99
+    },
+    {
+      "område": "St.hanshaugen",
+      "prosent": 1.8
+    },
+    {
+      "område": "Ulven",
+      "prosent": 1.66
+    },
+    {
+      "område": "Bjerke",
+      "prosent": 1.6
+    },
+    {
+      "område": "Åsen",
+      "prosent": 1.55
+    },
+    {
+      "område": "Sinsen",
+      "prosent": 1.5
+    },
+    {
+      "område": "Tåsen",
+      "prosent": 1.42
+    },
+    {
+      "område": "Manglerud",
+      "prosent": 1.38
+    },
+    {
+      "område": "Bjølsen",
+      "prosent": 1.21
+    },
+    {
+      "område": "Majorstuen",
+      "prosent": 1.07
+    },
+    {
+      "område": "Kampen",
+      "prosent": 1.06
+    },
+    {
+      "område": "Østensjø",
+      "prosent": 1.03
+    },
+    {
+      "område": "Homansbyen",
+      "prosent": 0.96
+    },
+    {
+      "område": "Grorud",
+      "prosent": 0.91
+    },
+    {
+      "område": "Frogner",
+      "prosent": 0.91
+    },
+    {
+      "område": "Fossum",
+      "prosent": 0.9
+    },
+    {
+      "område": "Bekkelaget",
+      "prosent": 0.83
+    },
+    {
+      "område": "Ris",
+      "prosent": 0.8
+    },
+    {
+      "område": "Sagene",
+      "prosent": 0.8
+    },
+    {
+      "område": "Langerud",
+      "prosent": 0.77
+    },
+    {
+      "område": "Lindern",
+      "prosent": 0.77
+    },
+    {
+      "område": "Gamlebyen",
+      "prosent": 0.77
+    },
+    {
+      "område": "Ulsholt",
+      "prosent": 0.74
+    },
+    {
+      "område": "Sandaker",
+      "prosent": 0.74
+    },
+    {
+      "område": "Sentrum 3",
+      "prosent": 0.71
+    },
+    {
+      "område": "Ljansbyen",
+      "prosent": 0.71
+    },
+    {
+      "område": "Rudene",
+      "prosent": 0.7
+    },
+    {
+      "område": "Alfaset",
+      "prosent": 0.62
+    },
+    {
+      "område": "Uranienborg",
+      "prosent": 0.6
+    },
+    {
+      "område": "Vålerenga",
+      "prosent": 0.6
+    },
+    {
+      "område": "Fagerborg",
+      "prosent": 0.51
+    },
+    {
+      "område": "Holmen",
+      "prosent": 0.49
+    },
+    {
+      "område": "Røabyen",
+      "prosent": 0.48
+    },
+    {
+      "område": "Grefsenmarka",
+      "prosent": 0.45
+    },
+    {
+      "område": "Sentrum 1",
+      "prosent": 0.42
+    },
+    {
+      "område": "Loenga",
+      "prosent": 0.42
+    },
+    {
+      "område": "Nordstrand",
+      "prosent": 0.41
+    },
+    {
+      "område": "Borgen",
+      "prosent": 0.41
+    },
+    {
+      "område": "Nordmarka",
+      "prosent": 0.38
+    },
+    {
+      "område": "Østmarka",
+      "prosent": 0.38
+    },
+    {
+      "område": "Skillebekk",
+      "prosent": 0.38
+    }
+  ],
+  "opprinnelseLand": [
+    {
+      "land": "Denmark",
+      "prosent": 13.56
+    },
+    {
+      "land": "Poland",
+      "prosent": 10.54
+    },
+    {
+      "land": "Germany",
+      "prosent": 9.75
+    },
+    {
+      "land": "France",
+      "prosent": 9.15
+    },
+    {
+      "land": "United Kingdom of Great Britain and Northern Ireland",
+      "prosent": 9.05
+    },
+    {
+      "land": "Sweden",
+      "prosent": 8.83
+    },
+    {
+      "land": "United States of America",
+      "prosent": 6.42
+    },
+    {
+      "land": "Spain",
+      "prosent": 5.0
+    },
+    {
+      "land": "Netherlands",
+      "prosent": 3.8
+    },
+    {
+      "land": "Ukraine",
+      "prosent": 3.14
+    },
+    {
+      "land": "Italy",
+      "prosent": 2.77
+    },
+    {
+      "land": "Romania",
+      "prosent": 2.26
+    },
+    {
+      "land": "Belgium",
+      "prosent": 1.71
+    },
+    {
+      "land": "Austria",
+      "prosent": 1.56
+    },
+    {
+      "land": "India",
+      "prosent": 1.5
+    },
+    {
+      "land": "Finland",
+      "prosent": 1.29
+    },
+    {
+      "land": "Greece",
+      "prosent": 1.02
+    },
+    {
+      "land": "Portugal",
+      "prosent": 1.02
+    },
+    {
+      "land": "Korea, Republic of",
+      "prosent": 0.95
+    },
+    {
+      "land": "China",
+      "prosent": 0.73
+    }
+  ]
 }

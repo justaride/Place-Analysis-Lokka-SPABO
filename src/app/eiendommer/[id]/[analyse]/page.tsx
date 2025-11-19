@@ -18,6 +18,13 @@ import AldersfordelingPyramid from '@/components/analytics/AldersfordelingPyrami
 import InntektsfordelingChart from '@/components/analytics/InntektsfordelingChart';
 import KorthandelTidsserie from '@/components/analytics/KorthandelTidsserie';
 import BesoksmønsterUkedag from '@/components/analytics/BesoksmønsterUkedag';
+import KonseptmiksChart from '@/components/analytics/KonseptmiksChart';
+import BesokPerTimeChart from '@/components/analytics/BesokPerTimeChart';
+import KjederVsUavhengigeChart from '@/components/analytics/KjederVsUavhengigeChart';
+import KorthandelPerUkedagChart from '@/components/analytics/KorthandelPerUkedagChart';
+import MedianinntektChart from '@/components/analytics/MedianinntektChart';
+import OpprinnelseChart from '@/components/analytics/OpprinnelseChart';
+import LandChart from '@/components/analytics/LandChart';
 
 interface PageProps {
   params: Promise<{
@@ -117,10 +124,16 @@ export default async function AnalysePage({ params }: PageProps) {
       const bevegelseJson = await readFile(bevegelsePath, 'utf-8');
       const bevegelseData = JSON.parse(bevegelseJson);
 
+      // Load konkurransebilde data
+      const konkurransePath = join(process.cwd(), 'src', 'data', 'konkurransebilde', `${id}-1min.json`);
+      const konkurranseJson = await readFile(konkurransePath, 'utf-8');
+      const konkurranseData = JSON.parse(konkurranseJson);
+
       analyseSpecificData = {
         demografi: demografiData,
         korthandel: korthandelData,
-        bevegelse: bevegelseData
+        bevegelse: bevegelseData,
+        konkurransebilde: konkurranseData
       };
     } catch (error) {
       console.log('Analysis-specific data not found:', error);
@@ -383,7 +396,7 @@ export default async function AnalysePage({ params }: PageProps) {
                 </div>
 
                 {/* Inntektsfordeling */}
-                <div>
+                <div className="mb-8 md:mb-12">
                   <h3 className="mb-4 text-lg font-semibold text-lokka-primary md:text-xl">
                     Inntektsfordeling
                   </h3>
@@ -391,6 +404,18 @@ export default async function AnalysePage({ params }: PageProps) {
                     <InntektsfordelingChart data={analyseSpecificData.demografi.inntektsfordeling} />
                   </div>
                 </div>
+
+                {/* Medianinntekt per husholdningstype */}
+                {analyseSpecificData.demografi.medianInntektPerHusholdstype && (
+                  <div>
+                    <h3 className="mb-4 text-lg font-semibold text-lokka-primary md:text-xl">
+                      Medianinntekt per husholdningstype
+                    </h3>
+                    <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
+                      <MedianinntektChart data={analyseSpecificData.demografi.medianInntektPerHusholdstype} />
+                    </div>
+                  </div>
+                )}
               </Container>
             </section>
           )}
@@ -442,6 +467,18 @@ export default async function AnalysePage({ params }: PageProps) {
                     <p className="mt-1 text-xs text-lokka-accent md:text-sm">siste måned</p>
                   </div>
                 </div>
+
+                {/* Korthandel per ukedag - årlig trend */}
+                {analyseSpecificData.korthandel.perUkedag && (
+                  <div className="mt-8 md:mt-12">
+                    <h3 className="mb-4 text-lg font-semibold text-lokka-primary md:text-xl">
+                      Utvikling per ukedag
+                    </h3>
+                    <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
+                      <KorthandelPerUkedagChart data={analyseSpecificData.korthandel.perUkedag} />
+                    </div>
+                  </div>
+                )}
               </Container>
             </section>
           )}
@@ -459,9 +496,27 @@ export default async function AnalysePage({ params }: PageProps) {
                   </p>
                 </FadeIn>
 
-                <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
-                  <BesoksmønsterUkedag data={analyseSpecificData.bevegelse.perUkedag} />
+                {/* Per ukedag */}
+                <div className="mb-8 md:mb-12">
+                  <h3 className="mb-4 text-lg font-semibold text-lokka-primary md:text-xl">
+                    Besøk per ukedag
+                  </h3>
+                  <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
+                    <BesoksmønsterUkedag data={analyseSpecificData.bevegelse.perUkedag} />
+                  </div>
                 </div>
+
+                {/* Per time */}
+                {analyseSpecificData.bevegelse.perTime && (
+                  <div className="mb-8 md:mb-12">
+                    <h3 className="mb-4 text-lg font-semibold text-lokka-primary md:text-xl">
+                      Besøk per time
+                    </h3>
+                    <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
+                      <BesokPerTimeChart data={analyseSpecificData.bevegelse.perTime} />
+                    </div>
+                  </div>
+                )}
 
                 {/* Key Stats */}
                 <div className="mt-6 grid gap-4 md:mt-8 md:grid-cols-2">
@@ -486,6 +541,132 @@ export default async function AnalysePage({ params }: PageProps) {
                     </p>
                   </div>
                 </div>
+              </Container>
+            </section>
+          )}
+
+          {/* Visitor Origin Section */}
+          {analyseSpecificData.bevegelse && (analyseSpecificData.bevegelse.opprinnelseOmråder || analyseSpecificData.bevegelse.opprinnelseLand) && (
+            <section className="border-t border-gray-200/30 bg-gray-50 py-12 md:py-16">
+              <Container>
+                <FadeIn>
+                  <h2 className="mb-6 text-2xl font-bold text-lokka-primary md:mb-8 md:text-3xl">
+                    🌍 Besøkende - Opprinnelse
+                  </h2>
+                  <p className="mb-6 text-sm text-lokka-secondary md:mb-8 md:text-base">
+                    Geografisk og internasjonal fordeling av besøkende til området
+                  </p>
+                </FadeIn>
+
+                {/* Geographic Areas */}
+                {analyseSpecificData.bevegelse.opprinnelseOmråder && (
+                  <div className="mb-8 md:mb-12">
+                    <h3 className="mb-4 text-lg font-semibold text-lokka-primary md:text-xl">
+                      Områder besøkende kommer fra
+                    </h3>
+                    <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
+                      <OpprinnelseChart data={analyseSpecificData.bevegelse.opprinnelseOmråder} limit={15} />
+                    </div>
+                  </div>
+                )}
+
+                {/* International Visitors */}
+                {analyseSpecificData.bevegelse.opprinnelseLand && (
+                  <div>
+                    <h3 className="mb-4 text-lg font-semibold text-lokka-primary md:text-xl">
+                      Topp 20 land (internasjonale besøkende)
+                    </h3>
+                    <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
+                      <LandChart data={analyseSpecificData.bevegelse.opprinnelseLand} limit={20} />
+                    </div>
+                  </div>
+                )}
+              </Container>
+            </section>
+          )}
+
+          {/* Konkurransebilde Section */}
+          {analyseSpecificData.konkurransebilde && (
+            <section className="border-t border-gray-200/30 bg-white py-12 md:py-16">
+              <Container>
+                <FadeIn>
+                  <h2 className="mb-6 text-2xl font-bold text-lokka-primary md:mb-8 md:text-3xl">
+                    🏪 Konkurransebilde
+                  </h2>
+                  <p className="mb-6 text-sm text-lokka-secondary md:mb-8 md:text-base">
+                    Markedsanalyse og konseptsammensetning i området
+                  </p>
+                </FadeIn>
+
+                {/* Key Market Stats */}
+                <div className="mb-8 grid gap-4 md:mb-12 md:grid-cols-4">
+                  <div className="rounded-xl border border-gray-200/50 bg-lokka-light/30 p-4 text-center md:p-6">
+                    <p className="text-sm font-medium uppercase tracking-wider text-lokka-secondary">
+                      Konsepttetthet
+                    </p>
+                    <p className="mt-2 text-2xl font-bold text-lokka-primary md:text-3xl">
+                      {analyseSpecificData.konkurransebilde.nøkkeltall.konseptTetthet}
+                    </p>
+                    <p className="mt-1 text-xs text-lokka-accent md:text-sm">per km²</p>
+                    <p className={`mt-1 text-sm font-semibold ${analyseSpecificData.konkurransebilde.nøkkeltall.trend.konseptTetthet < 0 ? 'text-red-600' : 'text-green-600'}`}>
+                      {analyseSpecificData.konkurransebilde.nøkkeltall.trend.konseptTetthet > 0 ? '+' : ''}{analyseSpecificData.konkurransebilde.nøkkeltall.trend.konseptTetthet}%
+                    </p>
+                  </div>
+                  <div className="rounded-xl border border-gray-200/50 bg-lokka-light/30 p-4 text-center md:p-6">
+                    <p className="text-sm font-medium uppercase tracking-wider text-lokka-secondary">
+                      Total omsetning
+                    </p>
+                    <p className="mt-2 text-2xl font-bold text-lokka-primary md:text-3xl">
+                      NOK {analyseSpecificData.konkurransebilde.nøkkeltall.totalOmsetning}M
+                    </p>
+                    <p className="mt-1 text-xs text-lokka-accent md:text-sm">i området</p>
+                    <p className={`mt-1 text-sm font-semibold ${analyseSpecificData.konkurransebilde.nøkkeltall.trend.omsetning < 0 ? 'text-red-600' : 'text-green-600'}`}>
+                      {analyseSpecificData.konkurransebilde.nøkkeltall.trend.omsetning > 0 ? '+' : ''}{analyseSpecificData.konkurransebilde.nøkkeltall.trend.omsetning}%
+                    </p>
+                  </div>
+                  <div className="rounded-xl border border-gray-200/50 bg-lokka-light/30 p-4 text-center md:p-6">
+                    <p className="text-sm font-medium uppercase tracking-wider text-lokka-secondary">
+                      Omsetningtetthet
+                    </p>
+                    <p className="mt-2 text-2xl font-bold text-lokka-primary md:text-3xl">
+                      NOK {(analyseSpecificData.konkurransebilde.nøkkeltall.omsetningTetthet / 1000).toFixed(1)}B
+                    </p>
+                    <p className="mt-1 text-xs text-lokka-accent md:text-sm">per km²</p>
+                  </div>
+                  <div className="rounded-xl border border-gray-200/50 bg-lokka-light/30 p-4 text-center md:p-6">
+                    <p className="text-sm font-medium uppercase tracking-wider text-lokka-secondary">
+                      Konsepter
+                    </p>
+                    <p className="mt-2 text-2xl font-bold text-lokka-primary md:text-3xl">
+                      {analyseSpecificData.konkurransebilde.konseptmiks.reduce((sum: number, k: any) => sum + k.antall, 0)}
+                    </p>
+                    <p className="mt-1 text-xs text-lokka-accent md:text-sm">totalt</p>
+                  </div>
+                </div>
+
+                {/* Konseptmiks */}
+                {analyseSpecificData.konkurransebilde.konseptmiks && (
+                  <div className="mb-8 md:mb-12">
+                    <h3 className="mb-4 text-lg font-semibold text-lokka-primary md:text-xl">
+                      Konseptmiks
+                    </h3>
+                    <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
+                      <KonseptmiksChart data={analyseSpecificData.konkurransebilde.konseptmiks} />
+                    </div>
+                  </div>
+                )}
+
+                {/* Kjeder vs Uavhengige */}
+                {analyseSpecificData.konkurransebilde.kjederVsUavhengige && (
+                  <div>
+                    <h3 className="mb-4 text-lg font-semibold text-lokka-primary md:text-xl">
+                      Kjeder vs. Uavhengige konsepter
+                    </h3>
+                    <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
+                      <KjederVsUavhengigeChart data={analyseSpecificData.konkurransebilde.kjederVsUavhengige} />
+                    </div>
+                  </div>
+                )}
               </Container>
             </section>
           )}
