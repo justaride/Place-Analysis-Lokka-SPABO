@@ -52,7 +52,7 @@ export default function AnalyseSelector({ plaaceData, plaaceAnalyses }: AnalyseS
                   </button>
                 ))}
               </div>
-              {currentAnalyse.beskrivelse && (
+              {currentAnalyse?.beskrivelse && (
                 <p className="mt-4 text-sm text-gray-600">
                   {currentAnalyse.beskrivelse}
                 </p>
@@ -62,11 +62,11 @@ export default function AnalyseSelector({ plaaceData, plaaceAnalyses }: AnalyseS
         )}
 
         {/* Display selected analysis */}
-        {currentAnalyse.screenshots.length > 0 && (
+        {currentAnalyse?.screenshots && currentAnalyse.screenshots.length > 0 && (
           <TabbedImageViewer
             screenshots={currentAnalyse.screenshots}
             title={plaaceAnalyses.length === 1
-              ? `Plaace Stedsanalyse - ${currentAnalyse.tittel}`
+              ? `Plaace Stedsanalyse - ${currentAnalyse?.tittel || ''}`
               : 'Plaace Stedsanalyse'
             }
           />
