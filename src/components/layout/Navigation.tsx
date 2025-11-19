@@ -4,11 +4,11 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 
-interface NavItem {
+type NavItem = {
   href: string;
   label: string;
   icon?: string;
-}
+};
 
 const navItems: NavItem[] = [
   { href: '/', label: 'Forside' },
