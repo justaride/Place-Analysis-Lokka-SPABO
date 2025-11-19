@@ -29,7 +29,7 @@ import ExecutiveSummary from '@/components/analytics/ExecutiveSummary';
 import QuickInsight from '@/components/analytics/QuickInsight';
 import HusholdningerChart from '@/components/analytics/HusholdningerChart';
 import TabbedSection from '@/components/ui/TabbedSection';
-import { Users, DollarSign, Home, Clock, BarChart3, Map, Globe } from 'lucide-react';
+import { Users, DollarSign, Home, Clock, BarChart3, Map, Globe, Activity, CreditCard, Store } from 'lucide-react';
 
 interface PageProps {
   params: Promise<{
@@ -400,9 +400,14 @@ export default async function AnalysePage({ params }: PageProps) {
             <section className="border-t border-gray-200/30 bg-white py-12 md:py-16">
               <Container>
                 <FadeIn>
-                  <h2 className="mb-6 text-2xl font-bold text-lokka-primary md:mb-8 md:text-3xl">
-                    📊 Demografi
-                  </h2>
+                  <div className="mb-6 flex items-center gap-3 md:mb-8">
+                    <div className="rounded-lg bg-blue-100 p-2">
+                      <Users className="h-6 w-6 text-blue-600 md:h-7 md:w-7" />
+                    </div>
+                    <h2 className="text-2xl font-bold text-lokka-primary md:text-3xl">
+                      Demografi
+                    </h2>
+                  </div>
                   <p className="mb-6 text-sm text-lokka-secondary md:mb-8 md:text-base">
                     Befolkningssammensetning innen 1 minutts gange ({analyseSpecificData.demografi.nøkkeltall.befolkning} innbyggere)
                   </p>
@@ -471,9 +476,14 @@ export default async function AnalysePage({ params }: PageProps) {
             <section className="border-t border-gray-200/30 bg-gray-50 py-12 md:py-16">
               <Container>
                 <FadeIn>
-                  <h2 className="mb-6 text-2xl font-bold text-lokka-primary md:mb-8 md:text-3xl">
-                    🚶 Besøksmønster
-                  </h2>
+                  <div className="mb-6 flex items-center gap-3 md:mb-8">
+                    <div className="rounded-lg bg-purple-100 p-2">
+                      <Activity className="h-6 w-6 text-purple-600 md:h-7 md:w-7" />
+                    </div>
+                    <h2 className="text-2xl font-bold text-lokka-primary md:text-3xl">
+                      Besøksmønster
+                    </h2>
+                  </div>
                   <p className="mb-6 text-sm text-lokka-secondary md:mb-8 md:text-base">
                     Daglig gjennomsnitt: {analyseSpecificData.bevegelse.nøkkeltall.dagligBesøk.toLocaleString()} besøk/dag
                   </p>
@@ -552,9 +562,14 @@ export default async function AnalysePage({ params }: PageProps) {
             <section className="border-t border-gray-200/30 bg-white py-12 md:py-16">
               <Container>
                 <FadeIn>
-                  <h2 className="mb-6 text-2xl font-bold text-lokka-primary md:mb-8 md:text-3xl">
-                    🌍 Besøkende - Opprinnelse
-                  </h2>
+                  <div className="mb-6 flex items-center gap-3 md:mb-8">
+                    <div className="rounded-lg bg-indigo-100 p-2">
+                      <Globe className="h-6 w-6 text-indigo-600 md:h-7 md:w-7" />
+                    </div>
+                    <h2 className="text-2xl font-bold text-lokka-primary md:text-3xl">
+                      Besøkende - Opprinnelse
+                    </h2>
+                  </div>
                   <p className="mb-6 text-sm text-lokka-secondary md:mb-8 md:text-base">
                     Geografisk og internasjonal fordeling av besøkende til området
                   </p>
@@ -603,9 +618,14 @@ export default async function AnalysePage({ params }: PageProps) {
             <section className="border-t border-gray-200/30 bg-gray-50 py-12 md:py-16">
               <Container>
                 <FadeIn>
-                  <h2 className="mb-6 text-2xl font-bold text-lokka-primary md:mb-8 md:text-3xl">
-                    💳 Korthandel 2019-2025
-                  </h2>
+                  <div className="mb-6 flex items-center gap-3 md:mb-8">
+                    <div className="rounded-lg bg-green-100 p-2">
+                      <CreditCard className="h-6 w-6 text-green-600 md:h-7 md:w-7" />
+                    </div>
+                    <h2 className="text-2xl font-bold text-lokka-primary md:text-3xl">
+                      Korthandel 2019-2025
+                    </h2>
+                  </div>
                   <p className="mb-6 text-sm text-lokka-secondary md:mb-8 md:text-base">
                     Utvikling i korthandel over tid. Daglig omsetning: NOK {analyseSpecificData.korthandel.nøkkeltall.dagligOmsetning}M
                   </p>
@@ -674,9 +694,14 @@ export default async function AnalysePage({ params }: PageProps) {
             <section className="border-t border-gray-200/30 bg-gray-50 py-12 md:py-16">
               <Container>
                 <FadeIn>
-                  <h2 className="mb-6 text-2xl font-bold text-lokka-primary md:mb-8 md:text-3xl">
-                    🏪 Konkurransebilde
-                  </h2>
+                  <div className="mb-6 flex items-center gap-3 md:mb-8">
+                    <div className="rounded-lg bg-orange-100 p-2">
+                      <Store className="h-6 w-6 text-orange-600 md:h-7 md:w-7" />
+                    </div>
+                    <h2 className="text-2xl font-bold text-lokka-primary md:text-3xl">
+                      Konkurransebilde
+                    </h2>
+                  </div>
                   <p className="mb-6 text-sm text-lokka-secondary md:mb-8 md:text-base">
                     Markedsanalyse og konseptsammensetning i området
                   </p>
