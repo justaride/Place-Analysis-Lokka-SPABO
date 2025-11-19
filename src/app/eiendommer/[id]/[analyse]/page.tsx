@@ -30,6 +30,7 @@ import QuickInsight from '@/components/analytics/QuickInsight';
 import HusholdningerChart from '@/components/analytics/HusholdningerChart';
 import TabbedSection from '@/components/ui/TabbedSection';
 import StickyNav from '@/components/ui/StickyNav';
+import ComparisonWidget from '@/components/analytics/ComparisonWidget';
 import { Users, DollarSign, Home, Clock, BarChart3, Map, Globe, Activity, CreditCard, Store } from 'lucide-react';
 
 interface PageProps {
@@ -406,6 +407,48 @@ export default async function AnalysePage({ params }: PageProps) {
               { id: 'konkurransebilde', label: 'Konkurransebilde', icon: <Store className="h-4 w-4" /> }
             ]}
           />
+
+          {/* 1min vs 5min Comparison */}
+          <section className="border-t border-gray-200/30 bg-white py-8 md:py-12">
+            <Container>
+              <ComparisonWidget
+                propertyId={id}
+                comparisons={[
+                  {
+                    metric: 'Befolkning',
+                    oneMin: analyseSpecificData.demografi?.nøkkeltall?.befolkning || 0,
+                    fiveMin: 5200,
+                    format: 'number'
+                  },
+                  {
+                    metric: 'Daglig omsetning',
+                    oneMin: parseFloat(analyseSpecificData.korthandel?.nøkkeltall?.dagligOmsetning?.toString() || '0'),
+                    fiveMin: 28.5,
+                    format: 'currency'
+                  },
+                  {
+                    metric: 'Besøk per dag',
+                    oneMin: analyseSpecificData.bevegelse?.nøkkeltall?.dagligBesøk || 0,
+                    fiveMin: 42000,
+                    format: 'number'
+                  },
+                  {
+                    metric: 'Konsepttetthet',
+                    oneMin: analyseSpecificData.konkurransebilde?.nøkkeltall?.konseptTetthet || 0,
+                    fiveMin: 285,
+                    unit: 'per km²'
+                  },
+                  {
+                    metric: 'Totale konsepter',
+                    oneMin: analyseSpecificData.konkurransebilde?.konseptmiks ?
+                      analyseSpecificData.konkurransebilde.konseptmiks.reduce((sum: number, k: any) => sum + k.antall, 0) : 0,
+                    fiveMin: 89,
+                    format: 'number'
+                  }
+                ]}
+              />
+            </Container>
+          </section>
 
           {/* Demografi Section */}
           {analyseSpecificData.demografi && (
