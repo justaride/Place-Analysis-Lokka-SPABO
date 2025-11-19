@@ -2,6 +2,14 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
+  // Check if authentication is enabled via environment variable
+  const authEnabled = process.env.ENABLE_AUTH === 'true';
+
+  // If auth is disabled, allow all requests through
+  if (!authEnabled) {
+    return NextResponse.next();
+  }
+
   // Skip middleware for API routes, static files, and login page
   if (
     request.nextUrl.pathname.startsWith('/api') ||
