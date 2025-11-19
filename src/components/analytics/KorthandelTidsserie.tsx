@@ -87,30 +87,30 @@ export default function KorthandelTidsserie({ data }: Props) {
       <div className="mb-4 flex gap-2">
         <button
           onClick={() => setAggregation('daily')}
-          className={`rounded px-3 py-1 text-sm ${
+          className={`rounded-lg px-3 py-1.5 text-sm font-medium transition-all duration-200 ${
             aggregation === 'daily'
-              ? 'bg-blue-600 text-white'
-              : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+              ? 'bg-blue-600 text-white shadow-md'
+              : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:shadow'
           }`}
         >
           Daglig
         </button>
         <button
           onClick={() => setAggregation('monthly')}
-          className={`rounded px-3 py-1 text-sm ${
+          className={`rounded-lg px-3 py-1.5 text-sm font-medium transition-all duration-200 ${
             aggregation === 'monthly'
-              ? 'bg-blue-600 text-white'
-              : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+              ? 'bg-blue-600 text-white shadow-md'
+              : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:shadow'
           }`}
         >
           Månedlig
         </button>
         <button
           onClick={() => setAggregation('yearly')}
-          className={`rounded px-3 py-1 text-sm ${
+          className={`rounded-lg px-3 py-1.5 text-sm font-medium transition-all duration-200 ${
             aggregation === 'yearly'
-              ? 'bg-blue-600 text-white'
-              : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+              ? 'bg-blue-600 text-white shadow-md'
+              : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:shadow'
           }`}
         >
           Årlig
@@ -145,24 +145,27 @@ export default function KorthandelTidsserie({ data }: Props) {
             type="monotone"
             dataKey="mat_opplevelser"
             stroke="#10B981"
-            strokeWidth={2}
-            dot={false}
+            strokeWidth={3}
+            dot={{ fill: '#10B981', r: 3 }}
+            activeDot={{ r: 6, fill: '#10B981', stroke: '#fff', strokeWidth: 2 }}
             name="mat_opplevelser"
           />
           <Line
             type="monotone"
             dataKey="handel"
             stroke="#3B82F6"
-            strokeWidth={2}
-            dot={false}
+            strokeWidth={3}
+            dot={{ fill: '#3B82F6', r: 3 }}
+            activeDot={{ r: 6, fill: '#3B82F6', stroke: '#fff', strokeWidth: 2 }}
             name="handel"
           />
           <Line
             type="monotone"
             dataKey="tjenester"
             stroke="#F59E0B"
-            strokeWidth={2}
-            dot={false}
+            strokeWidth={3}
+            dot={{ fill: '#F59E0B', r: 3 }}
+            activeDot={{ r: 6, fill: '#F59E0B', stroke: '#fff', strokeWidth: 2 }}
             name="tjenester"
           />
         </LineChart>

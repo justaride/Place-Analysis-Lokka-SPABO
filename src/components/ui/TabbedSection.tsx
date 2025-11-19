@@ -52,7 +52,7 @@ export default function TabbedSection({ tabs, defaultTab }: Props) {
       </div>
 
       {/* Tab Content */}
-      <div className="animate-fadeIn">
+      <div className="animate-slide-up">
         {currentTab?.content}
       </div>
     </div>
