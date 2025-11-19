@@ -36,7 +36,7 @@ export default function AnalyseSelector({ plaaceData, plaaceAnalyses }: AnalyseS
                     key={analyse.id}
                     onClick={() => setSelectedAnalyseId(analyse.id)}
                     className={`rounded-xl px-6 py-3 text-sm font-medium transition-all md:text-base ${
-                      currentAnalyse.id === analyse.id
+                      currentAnalyse?.id === analyse.id
                         ? 'bg-lokka-primary text-white shadow-medium'
                         : 'bg-gray-100 text-lokka-secondary hover:bg-gray-200'
                     }`}
