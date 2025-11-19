@@ -25,6 +25,9 @@ import KorthandelPerUkedagChart from '@/components/analytics/KorthandelPerUkedag
 import MedianinntektChart from '@/components/analytics/MedianinntektChart';
 import OpprinnelseChart from '@/components/analytics/OpprinnelseChart';
 import LandChart from '@/components/analytics/LandChart';
+import ExecutiveSummary from '@/components/analytics/ExecutiveSummary';
+import QuickInsight from '@/components/analytics/QuickInsight';
+import HusholdningerChart from '@/components/analytics/HusholdningerChart';
 
 interface PageProps {
   params: Promise<{
@@ -372,6 +375,24 @@ export default async function AnalysePage({ params }: PageProps) {
       {/* 1min-gange Specific Sections */}
       {analyse === '1min-gange' && analyseSpecificData && (
         <>
+          {/* Executive Summary */}
+          <section className="border-t border-gray-200/30 bg-gradient-to-b from-gray-50 to-white py-12 md:py-16">
+            <Container>
+              <ExecutiveSummary
+                data={{
+                  befolkning: analyseSpecificData.demografi?.nøkkeltall?.befolkning || 0,
+                  dagligOmsetning: analyseSpecificData.korthandel?.nøkkeltall?.dagligOmsetning?.toString() || '0',
+                  dagligBesøk: analyseSpecificData.bevegelse?.nøkkeltall?.dagligBesøk || 0,
+                  konseptTetthet: analyseSpecificData.konkurransebilde?.nøkkeltall?.konseptTetthet || 0,
+                  internasjonaleProsent: analyseSpecificData.bevegelse?.opprinnelseLand ?
+                    analyseSpecificData.bevegelse.opprinnelseLand.reduce((sum: number, land: any) => sum + land.prosent, 0) : undefined,
+                  trendKorthandel: analyseSpecificData.korthandel?.nøkkeltall?.trend || 0,
+                  trendKonsepter: analyseSpecificData.konkurransebilde?.nøkkeltall?.trend?.konseptTetthet || 0
+                }}
+              />
+            </Container>
+          </section>
+
           {/* Demografi Section */}
           {analyseSpecificData.demografi && (
             <section className="border-t border-gray-200/30 bg-white py-12 md:py-16">
@@ -384,6 +405,14 @@ export default async function AnalysePage({ params }: PageProps) {
                     Befolkningssammensetning innen 1 minutts gange ({analyseSpecificData.demografi.nøkkeltall.befolkning} innbyggere)
                   </p>
                 </FadeIn>
+
+                {/* Quick Insight */}
+                <div className="mb-8">
+                  <QuickInsight type="insight">
+                    Området har en <strong>befolkningstetthet på 25,500 per km²</strong> med en jevn
+                    aldersfordeling. Høyeste inntektsgruppe dominerer med sterk kjøpekraft.
+                  </QuickInsight>
+                </div>
 
                 {/* Aldersfordeling */}
                 <div className="mb-8 md:mb-12">
@@ -407,12 +436,24 @@ export default async function AnalysePage({ params }: PageProps) {
 
                 {/* Medianinntekt per husholdningstype */}
                 {analyseSpecificData.demografi.medianInntektPerHusholdstype && (
-                  <div>
+                  <div className="mb-8 md:mb-12">
                     <h3 className="mb-4 text-lg font-semibold text-lokka-primary md:text-xl">
                       Medianinntekt per husholdningstype
                     </h3>
                     <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
                       <MedianinntektChart data={analyseSpecificData.demografi.medianInntektPerHusholdstype} />
+                    </div>
+                  </div>
+                )}
+
+                {/* Husholdninger */}
+                {analyseSpecificData.demografi.husholdninger && (
+                  <div>
+                    <h3 className="mb-4 text-lg font-semibold text-lokka-primary md:text-xl">
+                      Husholdningstyper
+                    </h3>
+                    <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
+                      <HusholdningerChart data={analyseSpecificData.demografi.husholdninger} />
                     </div>
                   </div>
                 )}
@@ -432,6 +473,14 @@ export default async function AnalysePage({ params }: PageProps) {
                     Utvikling i korthandel over tid. Daglig omsetning: NOK {analyseSpecificData.korthandel.nøkkeltall.dagligOmsetning}M
                   </p>
                 </FadeIn>
+
+                {/* Quick Insight */}
+                <div className="mb-8">
+                  <QuickInsight type={analyseSpecificData.korthandel.nøkkeltall.trend < 0 ? "warning" : "trend"}>
+                    Korthandel viser <strong>{analyseSpecificData.korthandel.nøkkeltall.trend > 0 ? '+' : ''}{analyseSpecificData.korthandel.nøkkeltall.trend}% trend</strong> siste 30 dager.
+                    Total omsetning på <strong>NOK {analyseSpecificData.korthandel.nøkkeltall.totalOmsetning}M</strong> fra 2019-2025.
+                  </QuickInsight>
+                </div>
 
                 <div className="rounded-2xl border border-gray-200/50 bg-white p-4 shadow-medium md:p-6">
                   <KorthandelTidsserie data={analyseSpecificData.korthandel.tidsserie} />
@@ -496,6 +545,15 @@ export default async function AnalysePage({ params }: PageProps) {
                   </p>
                 </FadeIn>
 
+                {/* Quick Insight */}
+                <div className="mb-8">
+                  <QuickInsight type="insight">
+                    <strong>{analyseSpecificData.bevegelse.nøkkeltall.travlesteDag}</strong> er travleste dag med
+                    <strong> {analyseSpecificData.bevegelse.nøkkeltall.lørdagAndel}% av ukens besøk</strong>. Området har
+                    <strong> {analyseSpecificData.bevegelse.nøkkeltall.besøkPerKm2.toLocaleString()} besøk/km²</strong> daglig.
+                  </QuickInsight>
+                </div>
+
                 {/* Per ukedag */}
                 <div className="mb-8 md:mb-12">
                   <h3 className="mb-4 text-lg font-semibold text-lokka-primary md:text-xl">
@@ -558,6 +616,14 @@ export default async function AnalysePage({ params }: PageProps) {
                   </p>
                 </FadeIn>
 
+                {/* Quick Insight */}
+                <div className="mb-8">
+                  <QuickInsight type="info">
+                    <strong>Grünerløkka</strong> er det dominerende kildeområdet. Internasjonale besøkende utgjør en
+                    betydelig andel, med <strong>Danmark, Sverige og Tyskland</strong> som toppland.
+                  </QuickInsight>
+                </div>
+
                 {/* Geographic Areas */}
                 {analyseSpecificData.bevegelse.opprinnelseOmråder && (
                   <div className="mb-8 md:mb-12">
@@ -597,6 +663,15 @@ export default async function AnalysePage({ params }: PageProps) {
                     Markedsanalyse og konseptsammensetning i området
                   </p>
                 </FadeIn>
+
+                {/* Quick Insight */}
+                <div className="mb-8">
+                  <QuickInsight type="trend">
+                    Området viser <strong>{analyseSpecificData.konkurransebilde.nøkkeltall.trend.konseptTetthet}% nedgang</strong> i konsepttetthet,
+                    men opprettholder ekstremt høy omsetning på <strong>NOK 7.6 mrd/km²</strong>.
+                    Uavhengige konsepter øker sin markedsandel over tid.
+                  </QuickInsight>
+                </div>
 
                 {/* Key Market Stats */}
                 <div className="mb-8 grid gap-4 md:mb-12 md:grid-cols-4">
